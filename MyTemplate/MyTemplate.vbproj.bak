@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7548DA29-7F4A-465B-BAD4-913945CEE9CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyTemplate</RootNamespace>
+    <AssemblyName>MyTemplate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>Off</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MyTemplate.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v14.1" />
+    <Reference Include="DevExpress.Dashboard.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v14.1.Win, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1" />
+    <Reference Include="DevExpress.DataAccess.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core" />
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.1.Wizard, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.1" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Win, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.1.Extensions, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DevExpress.XtraEditors" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClassActiveUser.vb" />
+    <Compile Include="Classes\ClassCOA.vb" />
+    <Compile Include="Classes\ClassCustomer.vb" />
+    <Compile Include="Classes\ClassEmployee.vb" />
+    <Compile Include="Classes\ClassEncryptDecrypt\ClassEncrypt.vb" />
+    <Compile Include="Classes\ClassHeaderItem.vb" />
+    <Compile Include="Classes\ClassHelper.vb" />
+    <Compile Include="Classes\ClassItem.vb" />
+    <Compile Include="Classes\ClassPosition.vb" />
+    <Compile Include="Classes\ClassProject.vb" />
+    <Compile Include="Classes\ClassTax.vb" />
+    <Compile Include="Classes\ClassUser.vb" />
+    <Compile Include="Classes\ClassVendor.vb" />
+    <Compile Include="Classes\ReadConfig.vb" />
+    <Compile Include="Control\MyForm.Designer.vb">
+      <DependentUpon>MyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\myLine.Designer.vb">
+      <DependentUpon>myLine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\myLine.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\RibbonMainForm.Designer.vb">
+      <DependentUpon>RibbonMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RibbonMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseRelatedObject\DataSetPO.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseRelatedObject\DataSetRI.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseRelatedObject\DataSetSPPK.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSPPK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailDO.Designer.vb">
+      <DependentUpon>DetailDO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailDO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailPI.Designer.vb">
+      <DependentUpon>DetailPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailPP.Designer.vb">
+      <DependentUpon>DetailPP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailPP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailSI.Designer.vb">
+      <DependentUpon>DetailSI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailSI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailSO.Designer.vb">
+      <DependentUpon>DetailSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailSR.Designer.vb">
+      <DependentUpon>DetailSR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailSR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCustomer.Designer.vb">
+      <DependentUpon>FormCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDeposit.Designer.vb">
+      <DependentUpon>FormDeposit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormDeposit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDO.Designer.vb">
+      <DependentUpon>FormDO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormDO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDummy.Designer.vb">
+      <DependentUpon>FormDummy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormDummy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormEmployee.Designer.vb">
+      <DependentUpon>FormEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormHeaderItem.Designer.vb">
+      <DependentUpon>FormHeaderItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormHeaderItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormItem.Designer.vb">
+      <DependentUpon>FormItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormJournalVoucher.Designer.vb">
+      <DependentUpon>FormJournalVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormJournalVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormPayment.Designer.vb">
+      <DependentUpon>FormPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormPI.Designer.vb">
+      <DependentUpon>FormPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormPO.Designer.vb">
+      <DependentUpon>FormPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormPosition.Designer.vb">
+      <DependentUpon>FormPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormPP.Designer.vb">
+      <DependentUpon>FormPP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormPP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormProject.Designer.vb">
+      <DependentUpon>FormProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormRI.Designer.vb">
+      <DependentUpon>FormRI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormRI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSI.Designer.vb">
+      <DependentUpon>FormSI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSO.Designer.vb">
+      <DependentUpon>FormSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormSR.Designer.vb">
+      <DependentUpon>FormSR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTaxes.Designer.vb">
+      <DependentUpon>FormTaxes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormTaxes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTemplate.Designer.vb">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTest.Designer.vb">
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormUser.Designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormVendor.Designer.vb">
+      <DependentUpon>FormVendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormVendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderDO.Designer.vb">
+      <DependentUpon>HeaderDO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderDO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderPI.Designer.vb">
+      <DependentUpon>HeaderPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderPO.Designer.vb">
+      <DependentUpon>HeaderPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderPP.Designer.vb">
+      <DependentUpon>HeaderPP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderPP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderSI.Designer.vb">
+      <DependentUpon>HeaderSI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderSI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderSO.Designer.vb">
+      <DependentUpon>HeaderSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HeaderSR.Designer.vb">
+      <DependentUpon>HeaderSR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HeaderSR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Purchase Order.Designer.vb">
+      <DependentUpon>Purchase Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Purchase Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SubChart of Account.Designer.vb">
+      <DependentUpon>SubChart of Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SubChart of Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailPO.Designer.vb">
+      <DependentUpon>DetailPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Transaction\FormReceiveItem.Designer.vb">
+      <DependentUpon>FormReceiveItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Transaction\FormReceiveItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Transaction\HeaderRI.Designer.vb">
+      <DependentUpon>HeaderRI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Transaction\HeaderRI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ModuleDeclaration.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include="Control\MyForm.resx">
+      <DependentUpon>MyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\myLine.resx">
+      <DependentUpon>myLine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RibbonMainForm.resx">
+      <DependentUpon>RibbonMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailDO.resx">
+      <DependentUpon>DetailDO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailPI.resx">
+      <DependentUpon>DetailPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailPO.resx">
+      <DependentUpon>DetailPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailPP.resx">
+      <DependentUpon>DetailPP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailSI.resx">
+      <DependentUpon>DetailSI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailSO.resx">
+      <DependentUpon>DetailSO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailSR.resx">
+      <DependentUpon>DetailSR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCustomer.resx">
+      <DependentUpon>FormCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDeposit.resx">
+      <DependentUpon>FormDeposit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDO.resx">
+      <DependentUpon>FormDO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDummy.resx">
+      <DependentUpon>FormDummy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormEmployee.resx">
+      <DependentUpon>FormEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormHeaderItem.resx">
+      <DependentUpon>FormHeaderItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormItem.resx">
+      <DependentUpon>FormItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormJournalVoucher.resx">
+      <DependentUpon>FormJournalVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormPayment.resx">
+      <DependentUpon>FormPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormPI.resx">
+      <DependentUpon>FormPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormPO.resx">
+      <DependentUpon>FormPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormPosition.resx">
+      <DependentUpon>FormPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormPP.resx">
+      <DependentUpon>FormPP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormProject.resx">
+      <DependentUpon>FormProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormRI.resx">
+      <DependentUpon>FormRI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSI.resx">
+      <DependentUpon>FormSI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSO.resx">
+      <DependentUpon>FormSO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSR.resx">
+      <DependentUpon>FormSR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTaxes.resx">
+      <DependentUpon>FormTaxes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTemplate.resx">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTest.resx">
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormVendor.resx">
+      <DependentUpon>FormVendor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderDO.resx">
+      <DependentUpon>HeaderDO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderPI.resx">
+      <DependentUpon>HeaderPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderPO.resx">
+      <DependentUpon>HeaderPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderPP.resx">
+      <DependentUpon>HeaderPP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderSI.resx">
+      <DependentUpon>HeaderSI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderSO.resx">
+      <DependentUpon>HeaderSO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HeaderSR.resx">
+      <DependentUpon>HeaderSR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Purchase Order.resx">
+      <DependentUpon>Purchase Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SubChart of Account.resx">
+      <DependentUpon>SubChart of Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Transaction\FormReceiveItem.resx">
+      <DependentUpon>FormReceiveItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Transaction\HeaderRI.resx">
+      <DependentUpon>HeaderRI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetPO.xsc">
+      <DependentUpon>DataSetPO.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetPO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPO.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetPO.xss">
+      <DependentUpon>DataSetPO.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetRI.xsc">
+      <DependentUpon>DataSetRI.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetRI.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRI.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetRI.xss">
+      <DependentUpon>DataSetRI.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetSPPK.xsc">
+      <DependentUpon>DataSetSPPK.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetSPPK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSPPK.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetSPPK.xss">
+      <DependentUpon>DataSetSPPK.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\FormMaster\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
