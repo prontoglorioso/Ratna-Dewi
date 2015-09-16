@@ -149,7 +149,7 @@ Partial Class DetailJV
         '
         Me.LabelControl7.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelControl7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SelectHeaderJVDetailDataTableBindingSource, "JVDate", True))
-        Me.LabelControl7.Location = New System.Drawing.Point(264, 35)
+        Me.LabelControl7.Location = New System.Drawing.Point(295, 35)
         Me.LabelControl7.Name = "LabelControl7"
         Me.LabelControl7.Size = New System.Drawing.Size(49, 17)
         Me.LabelControl7.TabIndex = 15

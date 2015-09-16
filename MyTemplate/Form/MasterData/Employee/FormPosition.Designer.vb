@@ -29,9 +29,11 @@ Partial Class FormPosition
         Me.BtnAddPosition = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.txtJabatan.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtJabatan
@@ -82,7 +84,7 @@ Partial Class FormPosition
         Me.BtnDelPosition.Size = New System.Drawing.Size(80, 40)
         Me.BtnDelPosition.TabIndex = 2
         Me.BtnDelPosition.Tag = "view"
-        Me.BtnDelPosition.Text = "Delete"
+        Me.BtnDelPosition.Text = "Non Active"
         '
         'BtnEditPosition
         '
@@ -112,7 +114,7 @@ Partial Class FormPosition
         Me.GridControl1.Location = New System.Drawing.Point(380, 50)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(793, 211)
+        Me.GridControl1.Size = New System.Drawing.Size(793, 445)
         Me.GridControl1.TabIndex = 28
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -121,11 +123,20 @@ Partial Class FormPosition
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         '
+        'CheckEdit1
+        '
+        Me.CheckEdit1.Location = New System.Drawing.Point(764, 59)
+        Me.CheckEdit1.Name = "CheckEdit1"
+        Me.CheckEdit1.Properties.Caption = "Suspended"
+        Me.CheckEdit1.Size = New System.Drawing.Size(83, 22)
+        Me.CheckEdit1.TabIndex = 29
+        '
         'FormPosition
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1184, 661)
+        Me.ClientSize = New System.Drawing.Size(1184, 511)
+        Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.BtnCancelPosition)
         Me.Controls.Add(Me.BtnSavePosition)
@@ -140,6 +151,7 @@ Partial Class FormPosition
         CType(Me.txtJabatan.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -153,4 +165,5 @@ Partial Class FormPosition
     Friend WithEvents BtnAddPosition As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
 End Class

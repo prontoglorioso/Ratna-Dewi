@@ -90,4 +90,44 @@
             sqlConn.Close()
         End Try
     End Sub
+    Sub Restore()
+        If Not dbOpen() Then
+            Throw New Exception("Database Can't Open")
+        End If
+        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "SubAccountCOA_Res"}
+        With SqlCMD.Parameters
+            .Clear()
+            .AddWithValue("id", id)
+        End With
+        Try
+            SqlCMD.ExecuteNonQuery()
+        Catch ex As SqlClient.SqlException
+            Throw New Exception(ex.Message)
+        Finally
+            sqlConn.Close()
+        End Try
+    End Sub
+    Sub Load2()
+        If Not dbOpen() Then
+            Throw New Exception("Database Can't Open")
+        End If
+        DataCOA.Dispose()
+        DataCOA = New DataSet
+        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "SubAccountCOA_Get2"}
+        With SqlCMD.Parameters
+            .Clear()
+          
+        End With
+        Try
+            sqlDA = New SqlClient.SqlDataAdapter With {.SelectCommand = SqlCMD}
+            sqlDA.Fill(DataCOA, "TabelCOA")
+            sqlDA.Dispose()
+            SqlCMD.Dispose()
+           
+        Catch ex As SqlClient.SqlException
+            Throw New Exception(ex.Message)
+        Finally
+            dbClose()
+        End Try
+    End Sub
 End Class

@@ -46,8 +46,8 @@
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         idHeaderPO = Convert.ToInt32(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(0)))
-        FormReceiveItem.IDHeaderPO = idHeaderPO
-        FormReceiveItem.ShowDialog()
+        DetailRI.IDHeaderPO = idHeaderPO
+        DetailRI.ShowDialog()
     End Sub
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click

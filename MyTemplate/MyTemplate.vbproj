@@ -226,6 +226,12 @@
     <Compile Include="Form\Cash and Bank\DetailDeposit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\GeneralLedger\ListJV.Designer.vb">
+      <DependentUpon>ListJV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\GeneralLedger\ListJV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\MasterData\COA\ListChartOfAccount.Designer.vb">
       <DependentUpon>ListChartOfAccount.vb</DependentUpon>
     </Compile>
@@ -238,10 +244,40 @@
     <Compile Include="Form\MasterData\COA\SubChart of Account.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\MasterData\Customer\ListCustomer.Designer.vb">
+      <DependentUpon>ListCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\Customer\ListCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\Employee\ListEmployee.Designer.vb">
+      <DependentUpon>ListEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\Employee\ListEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\MasterData\Item\ListItem.Designer.vb">
       <DependentUpon>ListItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\MasterData\Item\ListItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\Project\ListProject.Designer.vb">
+      <DependentUpon>ListProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\Project\ListProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\Tax\ListTax.Designer.vb">
+      <DependentUpon>ListTax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\Tax\ListTax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\Vendor\ListVendor.Designer.vb">
+      <DependentUpon>ListVendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\Vendor\ListVendor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Sales\DetailDO.Designer.vb">
@@ -298,10 +334,10 @@
     <Compile Include="Form\DisposableForm\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MasterData\FormCustomer.Designer.vb">
+    <Compile Include="Form\MasterData\Customer\FormCustomer.Designer.vb">
       <DependentUpon>FormCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\MasterData\FormCustomer.vb">
+    <Compile Include="Form\MasterData\Customer\FormCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\DisposableForm\FormDeposit.Designer.vb">
@@ -314,12 +350,6 @@
       <DependentUpon>FormDO.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\DisposableForm\FormDO.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Undefined\FormDummy.Designer.vb">
-      <DependentUpon>FormDummy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Undefined\FormDummy.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\MasterData\Employee\FormEmployee.Designer.vb">
@@ -382,10 +412,10 @@
     <Compile Include="Form\DisposableForm\FormPP.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MasterData\FormProject.Designer.vb">
+    <Compile Include="Form\MasterData\Project\FormProject.Designer.vb">
       <DependentUpon>FormProject.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\MasterData\FormProject.vb">
+    <Compile Include="Form\MasterData\Project\FormProject.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\DisposableForm\FormRI.Designer.vb">
@@ -412,22 +442,10 @@
     <Compile Include="Form\DisposableForm\FormSR.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MasterData\FormTaxes.Designer.vb">
+    <Compile Include="Form\MasterData\Tax\FormTaxes.Designer.vb">
       <DependentUpon>FormTaxes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\MasterData\FormTaxes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Undefined\FormTemplate.Designer.vb">
-      <DependentUpon>FormTemplate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Undefined\FormTemplate.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Undefined\FormTest.Designer.vb">
-      <DependentUpon>FormTest.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Undefined\FormTest.vb">
+    <Compile Include="Form\MasterData\Tax\FormTaxes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Undefined\FormUser.Designer.vb">
@@ -436,10 +454,10 @@
     <Compile Include="Form\Undefined\FormUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MasterData\FormVendor.Designer.vb">
+    <Compile Include="Form\MasterData\Vendor\FormVendor.Designer.vb">
       <DependentUpon>FormVendor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\MasterData\FormVendor.vb">
+    <Compile Include="Form\MasterData\Vendor\FormVendor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Cash and Bank\HeaderDeposit.Designer.vb">
@@ -502,22 +520,22 @@
     <Compile Include="Form\GeneralLedger\HeaderJV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Undefined\PDF_Reader.Designer.vb">
+    <Compile Include="Form\Tools\PDF_Reader.Designer.vb">
       <DependentUpon>PDF_Reader.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Undefined\PDF_Reader.vb">
+    <Compile Include="Form\Tools\PDF_Reader.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Undefined\SpreadSheet.Designer.vb">
+    <Compile Include="Form\Tools\SpreadSheet.Designer.vb">
       <DependentUpon>SpreadSheet.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Undefined\SpreadSheet.vb">
+    <Compile Include="Form\Tools\SpreadSheet.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Undefined\RichEdit.Designer.vb">
+    <Compile Include="Form\Tools\RichEdit.Designer.vb">
       <DependentUpon>RichEdit.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Undefined\RichEdit.vb">
+    <Compile Include="Form\Tools\RichEdit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Undefined\SplashScreen1.Designer.vb">
@@ -532,10 +550,10 @@
     <Compile Include="Form\Purchase\DetailPO.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Purchase\FormReceiveItem.Designer.vb">
-      <DependentUpon>FormReceiveItem.vb</DependentUpon>
+    <Compile Include="Form\Purchase\DetailRI.Designer.vb">
+      <DependentUpon>DetailRI.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Purchase\FormReceiveItem.vb">
+    <Compile Include="Form\Purchase\DetailRI.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.vb">
@@ -610,14 +628,32 @@
     <EmbeddedResource Include="Form\Cash and Bank\DetailDeposit.resx">
       <DependentUpon>DetailDeposit.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\GeneralLedger\ListJV.resx">
+      <DependentUpon>ListJV.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\MasterData\COA\ListChartOfAccount.resx">
       <DependentUpon>ListChartOfAccount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MasterData\COA\SubChart of Account.resx">
       <DependentUpon>SubChart of Account.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\Customer\ListCustomer.resx">
+      <DependentUpon>ListCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\Employee\ListEmployee.resx">
+      <DependentUpon>ListEmployee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\MasterData\Item\ListItem.resx">
       <DependentUpon>ListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\Project\ListProject.resx">
+      <DependentUpon>ListProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\Tax\ListTax.resx">
+      <DependentUpon>ListTax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\Vendor\ListVendor.resx">
+      <DependentUpon>ListVendor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Sales\DetailDO.resx">
       <DependentUpon>DetailDO.vb</DependentUpon>
@@ -649,7 +685,7 @@
     <EmbeddedResource Include="Form\DisposableForm\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MasterData\FormCustomer.resx">
+    <EmbeddedResource Include="Form\MasterData\Customer\FormCustomer.resx">
       <DependentUpon>FormCustomer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\DisposableForm\FormDeposit.resx">
@@ -657,9 +693,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\DisposableForm\FormDO.resx">
       <DependentUpon>FormDO.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\FormDummy.resx">
-      <DependentUpon>FormDummy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MasterData\Employee\FormEmployee.resx">
       <DependentUpon>FormEmployee.vb</DependentUpon>
@@ -691,7 +724,7 @@
     <EmbeddedResource Include="Form\DisposableForm\FormPP.resx">
       <DependentUpon>FormPP.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MasterData\FormProject.resx">
+    <EmbeddedResource Include="Form\MasterData\Project\FormProject.resx">
       <DependentUpon>FormProject.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\DisposableForm\FormRI.resx">
@@ -706,19 +739,13 @@
     <EmbeddedResource Include="Form\DisposableForm\FormSR.resx">
       <DependentUpon>FormSR.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MasterData\FormTaxes.resx">
+    <EmbeddedResource Include="Form\MasterData\Tax\FormTaxes.resx">
       <DependentUpon>FormTaxes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\FormTemplate.resx">
-      <DependentUpon>FormTemplate.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\FormTest.resx">
-      <DependentUpon>FormTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Undefined\FormUser.resx">
       <DependentUpon>FormUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MasterData\FormVendor.resx">
+    <EmbeddedResource Include="Form\MasterData\Vendor\FormVendor.resx">
       <DependentUpon>FormVendor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Cash and Bank\HeaderDeposit.resx">
@@ -751,20 +778,20 @@
     <EmbeddedResource Include="Form\Sales\HeaderSR.resx">
       <DependentUpon>HeaderSR.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\PDF_Reader.resx">
+    <EmbeddedResource Include="Form\Tools\PDF_Reader.resx">
       <DependentUpon>PDF_Reader.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\SpreadSheet.resx">
+    <EmbeddedResource Include="Form\Tools\SpreadSheet.resx">
       <DependentUpon>SpreadSheet.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\RichEdit.resx">
+    <EmbeddedResource Include="Form\Tools\RichEdit.resx">
       <DependentUpon>RichEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Undefined\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Purchase\FormReceiveItem.resx">
-      <DependentUpon>FormReceiveItem.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Purchase\DetailRI.resx">
+      <DependentUpon>DetailRI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -939,6 +966,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

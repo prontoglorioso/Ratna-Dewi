@@ -88,15 +88,20 @@
     End Sub
 
     Private Sub BtnDelPosition_Click(sender As Object, e As EventArgs) Handles BtnDelPosition.Click
+        If BtnDelPosition.Text.ToLower = "non active" Then
 
-        If oPosition.id = 0 Then
-            XtraMessageBox.Show("Choose the data do you wish to delete?")
-        End If
-        If XtraMessageBox.Show("Do you wish to delete this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            oPosition.del()
+            If XtraMessageBox.Show("Do you wish to delete this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                oPosition.del()
+                LoadData()
+            End If
 
+        Else
+
+            If XtraMessageBox.Show("Do you wish to restore this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                oPosition.Restore()
+                LoadData2()
+            End If
         End If
-        LoadData()
     End Sub
     Sub GetDetail()
         ID = Convert.ToInt32(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(0)))
@@ -105,5 +110,27 @@
         oPosition.Load(False)
         txtJabatan.Text = oPosition.namaJabatan
 
+    End Sub
+    Private Sub CheckEdit1_CheckStateChanged(sender As Object, e As EventArgs) Handles CheckEdit1.CheckStateChanged
+        If CheckEdit1.CheckState = CheckState.Checked Then
+            LoadData2()
+            BtnDelPosition.Text = "Restore"
+        Else
+            LoadData()
+            BtnDelPosition.Text = "Non Active"
+
+        End If
+    End Sub
+    Sub LoadData2()
+        GridControl1.SuspendLayout()
+        oPosition.isDeleted = False
+        GridControl1.DataSource = Nothing
+        oPosition.Load2()
+        GridControl1.DataSource = oPosition.DataPosition.Tables("TabelPosition")
+        GridControl1.Refresh()
+        GridView1.BestFitColumns(True)
+        GridView1.Columns(1).Caption = "Position Name"
+        GridView1.Columns(0).Visible = False
+        GridView1.Columns(2).Visible = False
     End Sub
 End Class

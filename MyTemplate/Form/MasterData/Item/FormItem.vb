@@ -1,29 +1,14 @@
 ﻿Public Class FormItem
-
     Sub LoadData()
-
         GridControl1.SuspendLayout()
         oItem.id = False
-
         GridControl1.DataSource = Nothing
         oItem.Load(True)
         GridControl1.DataSource = oItem.DataItem.Tables("TabelItem")
         GridControl1.Refresh()
         GridView1.BestFitColumns(True)
         GridView1.Columns(0).Visible = False
-        GridView1.Columns(10).Visible = False
-        GridView1.Columns(9).Caption = "Item Type"
-        GridView1.Columns(1).Caption = "Sub Item Of"
-        GridView1.Columns(2).Caption = "Item Code"
-        GridView1.Columns(3).Caption = "Item Name"
-        GridView1.Columns(4).Caption = "Suspended"
-        GridView1.Columns(5).Caption = "Qty"
-        GridView1.Columns(6).Caption = "Unit"
-        GridView1.Columns(7).Caption = "Cost"
-        GridView1.Columns(8).Caption = "As Of"
 
-
-       
     End Sub
 
     Private Sub BtnAddItem_Click(sender As Object, e As EventArgs) Handles BtnAddItem.Click
@@ -52,14 +37,17 @@
         LoadData()
     End Sub
     Private Sub BtnDelItem_Click(sender As Object, e As EventArgs) Handles BtnDelItem.Click
-        If oItem.id = 0 Then
-            XtraMessageBox.Show("Choose the data do you wish to delete?")
+        If BtnDelItem.Text.ToLower = "non active" Then
+            If XtraMessageBox.Show("Do you wish to delete this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                oItem.del()
+                LoadData()
+            End If
+        Else
+            If XtraMessageBox.Show("Do you wish to restore this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                oItem.Restore()
+                LoadData2()
+            End If
         End If
-        If XtraMessageBox.Show("Do you wish to delete this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            oItem.del()
-
-        End If
-        LoadData()
     End Sub
     Private Sub BtnEditItem_Click(sender As Object, e As EventArgs) Handles BtnEditItem.Click
         GetDetail()
@@ -100,7 +88,7 @@
             oItem.idHeaderItem = LookUpItemType.EditValue()
             oItem.kodeItem = txtAccNoItem.Text()
             oItem.namaItem = txtNamaItem.Text()
-            oItem.status = CheckEdit1.Checked()
+
 
             If Len(Trim(txtQty.Text)) = 0 Then
                 oItem.qty = 0
@@ -141,7 +129,7 @@
         oItem.idHeaderItem = LookUpItemType.EditValue()
         oItem.kodeItem = txtAccNoItem.Text()
         oItem.namaItem = txtNamaItem.Text()
-        oItem.status = CheckEdit1.Checked()
+
         oItem.qty = 0
         oItem.unit = txtUnit.Text()
         oItem.cost = 0
@@ -165,7 +153,7 @@
         LookUpItemType.EditValue = oItem.idHeaderItem
         txtAccNoItem.Text = oItem.kodeItem
         txtNamaItem.Text = oItem.namaItem
-        RadioGroup1.EditValue = oItem.status
+        'RadioGroup1.EditValue = oItem.status
         txtQty.EditValue = oItem.qty
         txtUnit.Text = oItem.unit
         txtCost.Text = oItem.cost
@@ -179,6 +167,28 @@
                 DevExpress.XtraEditors.XtraMessageBox.Show("Wrong input date")
                 DateEditItem.Text = ""
             End If
+        End If
+    End Sub
+    Sub LoadData2()
+        GridControl1.SuspendLayout()
+        oItem.id = False
+
+        GridControl1.DataSource = Nothing
+        oItem.Load2()
+        GridControl1.DataSource = oItem.DataItem.Tables("TabelItem")
+        GridControl1.Refresh()
+        GridView1.BestFitColumns(True)
+        GridView1.Columns(0).Visible = False
+        GridView1.Columns(10).Visible = False
+       
+    End Sub
+    Private Sub CheckEdit1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEdit1.CheckedChanged
+        If CheckEdit1.CheckState = CheckState.Checked Then
+            LoadData2()
+            BtnDelItem.Text = "Restore"
+        Else
+            LoadData()
+            BtnDelItem.Text = "Non Active"
         End If
     End Sub
 End Class

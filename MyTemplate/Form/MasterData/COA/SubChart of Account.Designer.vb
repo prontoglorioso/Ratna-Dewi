@@ -32,7 +32,6 @@ Partial Class COA
         Me.BtnAddSubCOA = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         Me.DateEditSubCoa = New DevExpress.XtraEditors.DateEdit()
-        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
         Me.txtAccNoSubCOA = New DevExpress.XtraEditors.TextEdit()
         Me.txtNamaSubCOA = New DevExpress.XtraEditors.TextEdit()
         Me.txtOpB = New DevExpress.XtraEditors.TextEdit()
@@ -40,9 +39,9 @@ Partial Class COA
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.LookUpEditParent = New DevExpress.XtraEditors.LookUpEdit()
         Me.LookUpEditAccTyp = New DevExpress.XtraEditors.LookUpEdit()
+        Me.CheckEdit2 = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.DateEditSubCoa.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditSubCoa.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAccNoSubCOA.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNamaSubCOA.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtOpB.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +49,7 @@ Partial Class COA
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditParent.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditAccTyp.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelControl1
@@ -103,7 +103,7 @@ Partial Class COA
         Me.BtnCancelSubCOA.Appearance.Options.UseFont = True
         Me.BtnCancelSubCOA.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.BtnCancelSubCOA.Image = CType(resources.GetObject("BtnCancelSubCOA.Image"), System.Drawing.Image)
-        Me.BtnCancelSubCOA.Location = New System.Drawing.Point(426, 189)
+        Me.BtnCancelSubCOA.Location = New System.Drawing.Point(404, 189)
         Me.BtnCancelSubCOA.Name = "BtnCancelSubCOA"
         Me.BtnCancelSubCOA.Size = New System.Drawing.Size(80, 40)
         Me.BtnCancelSubCOA.TabIndex = 15
@@ -116,7 +116,7 @@ Partial Class COA
         Me.BtnSaveSubCOA.Appearance.Options.UseFont = True
         Me.BtnSaveSubCOA.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.BtnSaveSubCOA.Image = CType(resources.GetObject("BtnSaveSubCOA.Image"), System.Drawing.Image)
-        Me.BtnSaveSubCOA.Location = New System.Drawing.Point(328, 189)
+        Me.BtnSaveSubCOA.Location = New System.Drawing.Point(318, 189)
         Me.BtnSaveSubCOA.Name = "BtnSaveSubCOA"
         Me.BtnSaveSubCOA.Size = New System.Drawing.Size(80, 40)
         Me.BtnSaveSubCOA.TabIndex = 14
@@ -129,12 +129,12 @@ Partial Class COA
         Me.BtnDelSubCOA.Appearance.Options.UseFont = True
         Me.BtnDelSubCOA.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.BtnDelSubCOA.Image = CType(resources.GetObject("BtnDelSubCOA.Image"), System.Drawing.Image)
-        Me.BtnDelSubCOA.Location = New System.Drawing.Point(232, 189)
+        Me.BtnDelSubCOA.Location = New System.Drawing.Point(212, 189)
         Me.BtnDelSubCOA.Name = "BtnDelSubCOA"
-        Me.BtnDelSubCOA.Size = New System.Drawing.Size(80, 40)
+        Me.BtnDelSubCOA.Size = New System.Drawing.Size(100, 40)
         Me.BtnDelSubCOA.TabIndex = 13
         Me.BtnDelSubCOA.Tag = "view"
-        Me.BtnDelSubCOA.Text = "Delete"
+        Me.BtnDelSubCOA.Text = "Non Active"
         '
         'BtnEditSubCOA
         '
@@ -142,7 +142,7 @@ Partial Class COA
         Me.BtnEditSubCOA.Appearance.Options.UseFont = True
         Me.BtnEditSubCOA.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.BtnEditSubCOA.Image = CType(resources.GetObject("BtnEditSubCOA.Image"), System.Drawing.Image)
-        Me.BtnEditSubCOA.Location = New System.Drawing.Point(136, 189)
+        Me.BtnEditSubCOA.Location = New System.Drawing.Point(126, 189)
         Me.BtnEditSubCOA.Name = "BtnEditSubCOA"
         Me.BtnEditSubCOA.Size = New System.Drawing.Size(80, 40)
         Me.BtnEditSubCOA.TabIndex = 12
@@ -182,16 +182,6 @@ Partial Class COA
         Me.DateEditSubCoa.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEditSubCoa.Size = New System.Drawing.Size(100, 20)
         Me.DateEditSubCoa.TabIndex = 20
-        '
-        'CheckEdit1
-        '
-        Me.CheckEdit1.Location = New System.Drawing.Point(994, 59)
-        Me.CheckEdit1.Name = "CheckEdit1"
-        Me.CheckEdit1.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckEdit1.Properties.Appearance.Options.UseFont = True
-        Me.CheckEdit1.Properties.Caption = "Suspended"
-        Me.CheckEdit1.Size = New System.Drawing.Size(175, 22)
-        Me.CheckEdit1.TabIndex = 22
         '
         'txtAccNoSubCOA
         '
@@ -234,10 +224,10 @@ Partial Class COA
         '
         Me.GridControl1.Cursor = System.Windows.Forms.Cursors.Default
         Me.GridControl1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GridControl1.Location = New System.Drawing.Point(40, 248)
+        Me.GridControl1.Location = New System.Drawing.Point(40, 235)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1200, 200)
+        Me.GridControl1.Size = New System.Drawing.Size(1112, 255)
         Me.GridControl1.TabIndex = 28
         Me.GridControl1.Tag = "view"
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -270,19 +260,27 @@ Partial Class COA
         Me.LookUpEditAccTyp.TabIndex = 30
         Me.LookUpEditAccTyp.Tag = "input"
         '
+        'CheckEdit2
+        '
+        Me.CheckEdit2.Location = New System.Drawing.Point(548, 249)
+        Me.CheckEdit2.Name = "CheckEdit2"
+        Me.CheckEdit2.Properties.Caption = "Suspended"
+        Me.CheckEdit2.Size = New System.Drawing.Size(88, 22)
+        Me.CheckEdit2.TabIndex = 31
+        '
         'COA
         '
         Me.Appearance.Options.UseFont = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 661)
+        Me.Controls.Add(Me.CheckEdit2)
         Me.Controls.Add(Me.LookUpEditAccTyp)
         Me.Controls.Add(Me.LookUpEditParent)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.txtOpB)
         Me.Controls.Add(Me.txtNamaSubCOA)
         Me.Controls.Add(Me.txtAccNoSubCOA)
-        Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.DateEditSubCoa)
         Me.Controls.Add(Me.LabelControl7)
         Me.Controls.Add(Me.BtnCancelSubCOA)
@@ -301,7 +299,6 @@ Partial Class COA
         Me.Text = "Chart Of Account"
         CType(Me.DateEditSubCoa.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditSubCoa.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtAccNoSubCOA.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNamaSubCOA.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtOpB.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -309,6 +306,7 @@ Partial Class COA
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditParent.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditAccTyp.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -325,7 +323,6 @@ Partial Class COA
     Friend WithEvents BtnAddSubCOA As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents DateEditSubCoa As DevExpress.XtraEditors.DateEdit
-    Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents txtAccNoSubCOA As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtNamaSubCOA As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtOpB As DevExpress.XtraEditors.TextEdit
@@ -333,4 +330,5 @@ Partial Class COA
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents LookUpEditParent As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents LookUpEditAccTyp As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents CheckEdit2 As DevExpress.XtraEditors.CheckEdit
 End Class

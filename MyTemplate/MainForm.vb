@@ -47,11 +47,6 @@
         FormLogin.ShowDialog()
         AppliedAL(RibbonControl)
     End Sub
-    Private Sub BarButtonItem4_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem4.ItemClick
-        Dim newForm As New FormTest
-        newForm.MdiParent = Me
-        newForm.Show()
-    End Sub
     Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
         Dim newForm As New FormVendor
         newForm.MdiParent = Me
@@ -97,11 +92,6 @@
         newForm.MdiParent = Me
         newForm.Show()
     End Sub
-    Private Sub BarButtonItem22_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem22.ItemClick
-        Dim newForm As New HeaderPO
-        newForm.MdiParent = Me
-        newForm.Show()
-    End Sub
     Private Sub BarButtonItem23_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem23.ItemClick
         'Dim newForm As New HeaderRI
         'newForm.MdiParent = Me
@@ -114,11 +104,6 @@
     End Sub
     Private Sub BarButtonItem25_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem25.ItemClick
         Dim newForm As New HeaderPP
-        newForm.MdiParent = Me
-        newForm.Show()
-    End Sub
-    Private Sub BarButtonItem39_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem39.ItemClick
-        Dim newForm As New HeaderSO
         newForm.MdiParent = Me
         newForm.Show()
     End Sub
@@ -176,15 +161,48 @@
         newForm.MdiParent = Me
         newForm.Show()
     End Sub
-
     Private Sub NavBarItem13_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem13.LinkPressed
         Dim newForm As New ListItem
         newForm.MdiParent = Me
         newForm.Show()
     End Sub
-
     Private Sub NavBarItem18_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem18.LinkPressed
         Dim newForm As New ListChartOfAccount
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub NavBarItem15_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem15.LinkPressed
+        Dim newForm As New ListEmployee
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub NavBarItem16_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem16.LinkPressed
+        Dim newForm As New ListVendor
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub NavBarItem17_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem17.LinkPressed
+        Dim newForm As New ListCustomer
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub NavBarItem14_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem14.LinkPressed
+        Dim newForm As New ListProject
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub NavBarItem12_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem12.LinkPressed
+        Dim newForm As New ListTax
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub BarButtonItem68_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem68.ItemClick
+        Dim newForm As New HeaderPO
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+    Private Sub BarButtonItem69_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem69.ItemClick
+        Dim newForm As New HeaderSO
         newForm.MdiParent = Me
         newForm.Show()
     End Sub

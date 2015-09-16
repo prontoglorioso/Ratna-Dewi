@@ -98,14 +98,20 @@ Public Class FormEmployee
 
     Private Sub BtnDelDept_Click(sender As Object, e As EventArgs) Handles BtnDelDept.Click
 
-        If oEmployee.id = 0 Then
-            XtraMessageBox.Show("Choose the data do you wish to delete?")
-        End If
-        If XtraMessageBox.Show("Do you wish to delete this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
-            oEmployee.del()
+        If BtnDelDept.Text.ToLower = "non active" Then
 
+            If XtraMessageBox.Show("Do you wish to delete this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                oEmployee.del()
+                LoadData()
+            End If
+
+        Else
+
+            If XtraMessageBox.Show("Do you wish to restore this data?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                oEmployee.Restore()
+                LoadData2()
+            End If
         End If
-        LoadData()
 
     End Sub
 
@@ -153,5 +159,37 @@ Public Class FormEmployee
     End Sub
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         LoadReport()
+    End Sub
+    Sub LoadData2()
+        GridControl1.SuspendLayout()
+        oEmployee.isDeleted = False
+
+        GridControl1.DataSource = Nothing
+        oEmployee.Load2()
+        GridControl1.DataSource = oEmployee.DataEmployee.Tables("TabelEmployee")
+        GridControl1.Refresh()
+        GridView1.BestFitColumns(True)
+
+        GridView1.Columns(2).Caption = "Position Name"
+        GridView1.Columns(3).Caption = "Employee Name"
+        GridView1.Columns(5).Caption = "Salary Balance"
+        GridView1.Columns(4).Caption = "Start Work Since"
+
+
+
+        GridView1.Columns(0).Visible = False
+        GridView1.Columns(1).Visible = False
+        GridView1.Columns(6).Visible = False
+    End Sub
+
+    Private Sub CheckEdit1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEdit1.CheckedChanged
+        If CheckEdit1.CheckState = CheckState.Checked Then
+            LoadData2()
+            BtnDelDept.Text = "Restore"
+        Else
+            LoadData()
+            BtnDelDept.Text = "Non Active"
+
+        End If
     End Sub
 End Class
