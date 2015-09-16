@@ -176,6 +176,11 @@
     <Compile Include="DatabaseRelatedObject\DataSetJournalVoucher.vb">
       <DependentUpon>DataSetJournalVoucher.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseRelatedObject\DataSetList.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseRelatedObject\DataSetPayment.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -219,6 +224,24 @@
       <DependentUpon>DetailDeposit.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\Cash and Bank\DetailDeposit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\COA\ListChartOfAccount.Designer.vb">
+      <DependentUpon>ListChartOfAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\COA\ListChartOfAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\COA\SubChart of Account.Designer.vb">
+      <DependentUpon>SubChart of Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\COA\SubChart of Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MasterData\Item\ListItem.Designer.vb">
+      <DependentUpon>ListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterData\Item\ListItem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Sales\DetailDO.Designer.vb">
@@ -503,12 +526,6 @@
     <Compile Include="Form\Undefined\SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MasterData\SubChart of Account.Designer.vb">
-      <DependentUpon>SubChart of Account.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\MasterData\SubChart of Account.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\Purchase\DetailPO.Designer.vb">
       <DependentUpon>DetailPO.vb</DependentUpon>
     </Compile>
@@ -533,6 +550,12 @@
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Report\ReportChartOfAccount.Designer.vb">
+      <DependentUpon>ReportChartOfAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportChartOfAccount.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\ReportCustomer.Designer.vb">
       <DependentUpon>ReportCustomer.vb</DependentUpon>
     </Compile>
@@ -549,6 +572,12 @@
       <DependentUpon>ReportJV.vb</DependentUpon>
     </Compile>
     <Compile Include="Report\ReportJV.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportListItem.Designer.vb">
+      <DependentUpon>ReportListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportListItem.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ReportProject.Designer.vb">
@@ -580,6 +609,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Cash and Bank\DetailDeposit.resx">
       <DependentUpon>DetailDeposit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\COA\ListChartOfAccount.resx">
+      <DependentUpon>ListChartOfAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\COA\SubChart of Account.resx">
+      <DependentUpon>SubChart of Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterData\Item\ListItem.resx">
+      <DependentUpon>ListItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Sales\DetailDO.resx">
       <DependentUpon>DetailDO.vb</DependentUpon>
@@ -725,9 +763,6 @@
     <EmbeddedResource Include="Form\Undefined\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\MasterData\SubChart of Account.resx">
-      <DependentUpon>SubChart of Account.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\Purchase\FormReceiveItem.resx">
       <DependentUpon>FormReceiveItem.vb</DependentUpon>
     </EmbeddedResource>
@@ -745,6 +780,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\ReportChartOfAccount.resx">
+      <DependentUpon>ReportChartOfAccount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportCustomer.resx">
       <DependentUpon>ReportCustomer.vb</DependentUpon>
     </EmbeddedResource>
@@ -753,6 +791,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportJV.resx">
       <DependentUpon>ReportJV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportListItem.resx">
+      <DependentUpon>ReportListItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportProject.resx">
       <DependentUpon>ReportProject.vb</DependentUpon>
@@ -788,6 +829,17 @@
     </None>
     <None Include="DatabaseRelatedObject\DataSetJournalVoucher.xss">
       <DependentUpon>DataSetJournalVoucher.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetList.xsc">
+      <DependentUpon>DataSetList.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetList.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DatabaseRelatedObject\DataSetList.xss">
+      <DependentUpon>DataSetList.xsd</DependentUpon>
     </None>
     <None Include="DatabaseRelatedObject\DataSetPayment.xsc">
       <DependentUpon>DataSetPayment.xsd</DependentUpon>

@@ -73,10 +73,10 @@ Partial Class FormItem
         '
         Me.GridControl1.Cursor = System.Windows.Forms.Cursors.Default
         Me.GridControl1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GridControl1.Location = New System.Drawing.Point(40, 244)
+        Me.GridControl1.Location = New System.Drawing.Point(40, 240)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1200, 200)
+        Me.GridControl1.Size = New System.Drawing.Size(979, 200)
         Me.GridControl1.TabIndex = 47
         Me.GridControl1.Tag = "view"
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -116,7 +116,7 @@ Partial Class FormItem
         Me.CheckEdit1.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckEdit1.Properties.Appearance.Options.UseFont = True
         Me.CheckEdit1.Properties.Caption = "Suspended"
-        Me.CheckEdit1.Size = New System.Drawing.Size(175, 19)
+        Me.CheckEdit1.Size = New System.Drawing.Size(175, 22)
         Me.CheckEdit1.TabIndex = 43
         Me.CheckEdit1.Tag = "input"
         '

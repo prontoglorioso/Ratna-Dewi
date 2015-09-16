@@ -84,6 +84,20 @@ Partial Class MainForm
         Me.BarButtonItem49 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem50 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem51 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem52 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem53 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem54 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem55 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem56 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem57 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem58 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem59 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem60 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem61 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem62 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem63 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem64 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem67 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -107,6 +121,7 @@ Partial Class MainForm
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup11 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup13 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup19 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage8 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemCheckEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
@@ -140,19 +155,6 @@ Partial Class MainForm
         Me.NavBarItem14 = New DevExpress.XtraNavBar.NavBarItem()
         Me.mdiFormManager = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-        Me.BarButtonItem52 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem53 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem54 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem55 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem56 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem57 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem58 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem59 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem60 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem61 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem62 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem63 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem64 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem65 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem66 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,10 +166,10 @@ Partial Class MainForm
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.SkinRibbonGalleryBarItem1, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem5, Me.RibbonGalleryBarItem1, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem15, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BarButtonItem21, Me.BarSubItem1, Me.BarSubItem2, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem24, Me.BarButtonItem25, Me.BarSubItem3, Me.BarSubItem4, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem30, Me.BarButtonItem31, Me.BarButtonItem32, Me.BarButtonItem33, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.RibbonGalleryBarItem2, Me.SkinRibbonGalleryBarItem4, Me.BarSubItem5, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem50, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem54, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem59, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem62, Me.BarButtonItem63, Me.BarButtonItem64})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.SkinRibbonGalleryBarItem1, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem5, Me.RibbonGalleryBarItem1, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem15, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BarButtonItem21, Me.BarSubItem1, Me.BarSubItem2, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem24, Me.BarButtonItem25, Me.BarSubItem3, Me.BarSubItem4, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem30, Me.BarButtonItem31, Me.BarButtonItem32, Me.BarButtonItem33, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.RibbonGalleryBarItem2, Me.SkinRibbonGalleryBarItem4, Me.BarSubItem5, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem50, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem54, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem59, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem62, Me.BarButtonItem63, Me.BarButtonItem64, Me.BarButtonItem67})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.Margin = New System.Windows.Forms.Padding(5)
-        Me.RibbonControl.MaxItemId = 80
+        Me.RibbonControl.MaxItemId = 81
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2, Me.RibbonPage4, Me.RibbonPage3, Me.RibbonPage6, Me.RibbonPage7, Me.RibbonPage8})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1})
@@ -612,6 +614,92 @@ Partial Class MainForm
         Me.BarButtonItem51.Name = "BarButtonItem51"
         Me.BarButtonItem51.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BarButtonItem52
+        '
+        Me.BarButtonItem52.Caption = "PO"
+        Me.BarButtonItem52.Id = 67
+        Me.BarButtonItem52.Name = "BarButtonItem52"
+        '
+        'BarButtonItem53
+        '
+        Me.BarButtonItem53.Caption = "RI"
+        Me.BarButtonItem53.Id = 68
+        Me.BarButtonItem53.Name = "BarButtonItem53"
+        '
+        'BarButtonItem54
+        '
+        Me.BarButtonItem54.Caption = "PI"
+        Me.BarButtonItem54.Id = 69
+        Me.BarButtonItem54.Name = "BarButtonItem54"
+        '
+        'BarButtonItem55
+        '
+        Me.BarButtonItem55.Caption = "PP"
+        Me.BarButtonItem55.Id = 70
+        Me.BarButtonItem55.Name = "BarButtonItem55"
+        '
+        'BarButtonItem56
+        '
+        Me.BarButtonItem56.Caption = "BarButtonItem56"
+        Me.BarButtonItem56.Id = 71
+        Me.BarButtonItem56.Name = "BarButtonItem56"
+        '
+        'BarButtonItem57
+        '
+        Me.BarButtonItem57.Caption = "BarButtonItem57"
+        Me.BarButtonItem57.Id = 72
+        Me.BarButtonItem57.Name = "BarButtonItem57"
+        '
+        'BarButtonItem58
+        '
+        Me.BarButtonItem58.Caption = "BarButtonItem58"
+        Me.BarButtonItem58.Id = 73
+        Me.BarButtonItem58.Name = "BarButtonItem58"
+        '
+        'BarButtonItem59
+        '
+        Me.BarButtonItem59.Caption = "BarButtonItem59"
+        Me.BarButtonItem59.Id = 74
+        Me.BarButtonItem59.Name = "BarButtonItem59"
+        '
+        'BarButtonItem60
+        '
+        Me.BarButtonItem60.Caption = "BarButtonItem60"
+        Me.BarButtonItem60.Id = 75
+        Me.BarButtonItem60.Name = "BarButtonItem60"
+        '
+        'BarButtonItem61
+        '
+        Me.BarButtonItem61.Caption = "BarButtonItem61"
+        Me.BarButtonItem61.Id = 76
+        Me.BarButtonItem61.Name = "BarButtonItem61"
+        '
+        'BarButtonItem62
+        '
+        Me.BarButtonItem62.Caption = "BarButtonItem62"
+        Me.BarButtonItem62.Id = 77
+        Me.BarButtonItem62.Name = "BarButtonItem62"
+        '
+        'BarButtonItem63
+        '
+        Me.BarButtonItem63.Caption = "Chart Of Account"
+        Me.BarButtonItem63.Id = 78
+        Me.BarButtonItem63.Name = "BarButtonItem63"
+        '
+        'BarButtonItem64
+        '
+        Me.BarButtonItem64.Caption = "BarButtonItem64"
+        Me.BarButtonItem64.Id = 79
+        Me.BarButtonItem64.Name = "BarButtonItem64"
+        '
+        'BarButtonItem67
+        '
+        Me.BarButtonItem67.Caption = "Music"
+        Me.BarButtonItem67.Glyph = CType(resources.GetObject("BarButtonItem67.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem67.Id = 80
+        Me.BarButtonItem67.Name = "BarButtonItem67"
+        Me.BarButtonItem67.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
@@ -749,7 +837,7 @@ Partial Class MainForm
         '
         'RibbonPage7
         '
-        Me.RibbonPage7.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup4, Me.RibbonPageGroup5, Me.RibbonPageGroup6, Me.RibbonPageGroup11, Me.RibbonPageGroup13})
+        Me.RibbonPage7.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup4, Me.RibbonPageGroup5, Me.RibbonPageGroup6, Me.RibbonPageGroup11, Me.RibbonPageGroup13, Me.RibbonPageGroup19})
         Me.RibbonPage7.Image = CType(resources.GetObject("RibbonPage7.Image"), System.Drawing.Image)
         Me.RibbonPage7.Name = "RibbonPage7"
         Me.RibbonPage7.Text = "Tools"
@@ -788,6 +876,13 @@ Partial Class MainForm
         Me.RibbonPageGroup13.ItemLinks.Add(Me.BarButtonItem49)
         Me.RibbonPageGroup13.Name = "RibbonPageGroup13"
         Me.RibbonPageGroup13.ShowCaptionButton = False
+        '
+        'RibbonPageGroup19
+        '
+        Me.RibbonPageGroup19.AllowTextClipping = False
+        Me.RibbonPageGroup19.ItemLinks.Add(Me.BarButtonItem67)
+        Me.RibbonPageGroup19.Name = "RibbonPageGroup19"
+        Me.RibbonPageGroup19.ShowCaptionButton = False
         '
         'RibbonPage8
         '
@@ -833,9 +928,8 @@ Partial Class MainForm
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 150)
         Me.NavBarControl1.Margin = New System.Windows.Forms.Padding(5)
         Me.NavBarControl1.Name = "NavBarControl1"
-        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 170
-        Me.NavBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.ExplorerBar
-        Me.NavBarControl1.Size = New System.Drawing.Size(170, 466)
+        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 261
+        Me.NavBarControl1.Size = New System.Drawing.Size(261, 466)
         Me.NavBarControl1.TabIndex = 2
         Me.NavBarControl1.Text = "NavBarControl1"
         '
@@ -869,7 +963,6 @@ Partial Class MainForm
         'NavBarGroup2
         '
         Me.NavBarGroup2.Caption = "SALES"
-        Me.NavBarGroup2.Expanded = True
         Me.NavBarGroup2.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem5), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem6), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem7), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem8)})
         Me.NavBarGroup2.Name = "NavBarGroup2"
         '
@@ -896,7 +989,6 @@ Partial Class MainForm
         'NavBarGroup3
         '
         Me.NavBarGroup3.Caption = "CASH AND BANK"
-        Me.NavBarGroup3.Expanded = True
         Me.NavBarGroup3.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem9), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem10)})
         Me.NavBarGroup3.Name = "NavBarGroup3"
         '
@@ -913,7 +1005,6 @@ Partial Class MainForm
         'NavBarGroup4
         '
         Me.NavBarGroup4.Caption = "GENERAL LEDGER"
-        Me.NavBarGroup4.Expanded = True
         Me.NavBarGroup4.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem11)})
         Me.NavBarGroup4.Name = "NavBarGroup4"
         '
@@ -925,7 +1016,6 @@ Partial Class MainForm
         'NavBarGroup5
         '
         Me.NavBarGroup5.Caption = "PROJECT"
-        Me.NavBarGroup5.Expanded = True
         Me.NavBarGroup5.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem19)})
         Me.NavBarGroup5.Name = "NavBarGroup5"
         '
@@ -983,84 +1073,6 @@ Partial Class MainForm
         'DefaultLookAndFeel1
         '
         Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "Valentine"
-        '
-        'BarButtonItem52
-        '
-        Me.BarButtonItem52.Caption = "PO"
-        Me.BarButtonItem52.Id = 67
-        Me.BarButtonItem52.Name = "BarButtonItem52"
-        '
-        'BarButtonItem53
-        '
-        Me.BarButtonItem53.Caption = "RI"
-        Me.BarButtonItem53.Id = 68
-        Me.BarButtonItem53.Name = "BarButtonItem53"
-        '
-        'BarButtonItem54
-        '
-        Me.BarButtonItem54.Caption = "PI"
-        Me.BarButtonItem54.Id = 69
-        Me.BarButtonItem54.Name = "BarButtonItem54"
-        '
-        'BarButtonItem55
-        '
-        Me.BarButtonItem55.Caption = "PP"
-        Me.BarButtonItem55.Id = 70
-        Me.BarButtonItem55.Name = "BarButtonItem55"
-        '
-        'BarButtonItem56
-        '
-        Me.BarButtonItem56.Caption = "BarButtonItem56"
-        Me.BarButtonItem56.Id = 71
-        Me.BarButtonItem56.Name = "BarButtonItem56"
-        '
-        'BarButtonItem57
-        '
-        Me.BarButtonItem57.Caption = "BarButtonItem57"
-        Me.BarButtonItem57.Id = 72
-        Me.BarButtonItem57.Name = "BarButtonItem57"
-        '
-        'BarButtonItem58
-        '
-        Me.BarButtonItem58.Caption = "BarButtonItem58"
-        Me.BarButtonItem58.Id = 73
-        Me.BarButtonItem58.Name = "BarButtonItem58"
-        '
-        'BarButtonItem59
-        '
-        Me.BarButtonItem59.Caption = "BarButtonItem59"
-        Me.BarButtonItem59.Id = 74
-        Me.BarButtonItem59.Name = "BarButtonItem59"
-        '
-        'BarButtonItem60
-        '
-        Me.BarButtonItem60.Caption = "BarButtonItem60"
-        Me.BarButtonItem60.Id = 75
-        Me.BarButtonItem60.Name = "BarButtonItem60"
-        '
-        'BarButtonItem61
-        '
-        Me.BarButtonItem61.Caption = "BarButtonItem61"
-        Me.BarButtonItem61.Id = 76
-        Me.BarButtonItem61.Name = "BarButtonItem61"
-        '
-        'BarButtonItem62
-        '
-        Me.BarButtonItem62.Caption = "BarButtonItem62"
-        Me.BarButtonItem62.Id = 77
-        Me.BarButtonItem62.Name = "BarButtonItem62"
-        '
-        'BarButtonItem63
-        '
-        Me.BarButtonItem63.Caption = "Chart Of Account"
-        Me.BarButtonItem63.Id = 78
-        Me.BarButtonItem63.Name = "BarButtonItem63"
-        '
-        'BarButtonItem64
-        '
-        Me.BarButtonItem64.Caption = "BarButtonItem64"
-        Me.BarButtonItem64.Id = 79
-        Me.BarButtonItem64.Name = "BarButtonItem64"
         '
         'BarButtonItem65
         '
@@ -1243,6 +1255,8 @@ Partial Class MainForm
     Friend WithEvents BarButtonItem64 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem65 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem66 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem67 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup19 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 
 
 End Class
