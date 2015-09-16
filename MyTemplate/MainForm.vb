@@ -176,4 +176,16 @@
         newForm.MdiParent = Me
         newForm.Show()
     End Sub
+
+    Private Sub NavBarItem13_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem13.LinkPressed
+        Dim newForm As New ListItem
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
+
+    Private Sub NavBarItem18_LinkPressed(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem18.LinkPressed
+        Dim newForm As New ListChartOfAccount
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
 End Class
