@@ -69,3 +69,6 @@ C:\Users\Ratna\Documents\Visual Studio 2013\Projects\SPPK\MyTemplate\obj\Debug\M
 C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna Dewi\MyTemplate\bin\Debug\MyTemplate.exe.config
 C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna Dewi\MyTemplate\obj\Debug\MyTemplate.exe
 C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna Dewi\MyTemplate\obj\Debug\MyTemplate.pdb
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\bin\Debug\MyTemplate.exe.config
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.exe
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.pdb
