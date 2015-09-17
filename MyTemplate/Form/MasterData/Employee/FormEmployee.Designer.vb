@@ -41,6 +41,7 @@ Partial Class FormEmployee
         Me.DataSetReport = New MyTemplate.DataSetReport()
         Me.ReportEmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReportEmployeeTableAdapter = New MyTemplate.DataSetReportTableAdapters.ReportEmployeeTableAdapter()
+        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtGapok.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +51,7 @@ Partial Class FormEmployee
         CType(Me.LookUpDept.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetReport, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReportEmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridControl1
@@ -59,7 +61,7 @@ Partial Class FormEmployee
         Me.GridControl1.Location = New System.Drawing.Point(380, 50)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(793, 211)
+        Me.GridControl1.Size = New System.Drawing.Size(793, 449)
         Me.GridControl1.TabIndex = 79
         Me.GridControl1.Tag = "view"
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -141,7 +143,7 @@ Partial Class FormEmployee
         Me.BtnCancelDept.Image = CType(resources.GetObject("BtnCancelDept.Image"), System.Drawing.Image)
         Me.BtnCancelDept.Location = New System.Drawing.Point(19, 221)
         Me.BtnCancelDept.Name = "BtnCancelDept"
-        Me.BtnCancelDept.Size = New System.Drawing.Size(339, 21)
+        Me.BtnCancelDept.Size = New System.Drawing.Size(346, 21)
         Me.BtnCancelDept.TabIndex = 4
         Me.BtnCancelDept.Tag = "cancel"
         Me.BtnCancelDept.Text = "Cancel"
@@ -152,7 +154,7 @@ Partial Class FormEmployee
         Me.BtnSaveDept.Appearance.Options.UseFont = True
         Me.BtnSaveDept.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.BtnSaveDept.Image = CType(resources.GetObject("BtnSaveDept.Image"), System.Drawing.Image)
-        Me.BtnSaveDept.Location = New System.Drawing.Point(278, 175)
+        Me.BtnSaveDept.Location = New System.Drawing.Point(285, 175)
         Me.BtnSaveDept.Name = "BtnSaveDept"
         Me.BtnSaveDept.Size = New System.Drawing.Size(80, 40)
         Me.BtnSaveDept.TabIndex = 3
@@ -167,10 +169,10 @@ Partial Class FormEmployee
         Me.BtnDelDept.Image = CType(resources.GetObject("BtnDelDept.Image"), System.Drawing.Image)
         Me.BtnDelDept.Location = New System.Drawing.Point(192, 175)
         Me.BtnDelDept.Name = "BtnDelDept"
-        Me.BtnDelDept.Size = New System.Drawing.Size(80, 40)
+        Me.BtnDelDept.Size = New System.Drawing.Size(87, 40)
         Me.BtnDelDept.TabIndex = 2
         Me.BtnDelDept.Tag = "view"
-        Me.BtnDelDept.Text = "Delete"
+        Me.BtnDelDept.Text = "Non Active"
         '
         'BtnEditDept
         '
@@ -231,7 +233,7 @@ Partial Class FormEmployee
         Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
         Me.SimpleButton1.Location = New System.Drawing.Point(19, 248)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(339, 21)
+        Me.SimpleButton1.Size = New System.Drawing.Size(346, 21)
         Me.SimpleButton1.TabIndex = 80
         Me.SimpleButton1.Tag = "cancel"
         Me.SimpleButton1.Text = "Print"
@@ -263,11 +265,20 @@ Partial Class FormEmployee
         '
         Me.ReportEmployeeTableAdapter.ClearBeforeFill = True
         '
+        'CheckEdit1
+        '
+        Me.CheckEdit1.Location = New System.Drawing.Point(893, 63)
+        Me.CheckEdit1.Name = "CheckEdit1"
+        Me.CheckEdit1.Properties.Caption = "Suspended"
+        Me.CheckEdit1.Size = New System.Drawing.Size(81, 22)
+        Me.CheckEdit1.TabIndex = 82
+        '
         'FormEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1184, 661)
+        Me.ClientSize = New System.Drawing.Size(1184, 511)
+        Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.LabelControl2)
         Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.LookUpDept)
@@ -296,6 +307,7 @@ Partial Class FormEmployee
         CType(Me.LookUpDept.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetReport, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReportEmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -321,4 +333,5 @@ Partial Class FormEmployee
     Friend WithEvents DataSetReport As MyTemplate.DataSetReport
     Friend WithEvents ReportEmployeeBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ReportEmployeeTableAdapter As MyTemplate.DataSetReportTableAdapters.ReportEmployeeTableAdapter
+    Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
 End Class

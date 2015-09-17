@@ -9,7 +9,7 @@
         If Not dbOpen() Then
             Throw New Exception("Database Can't Open")
         End If
-        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "Header_Set"}
+        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "ItemHeader_Set"}
         With SqlCMD.Parameters
             .Clear()
             .AddWithValue("id", id)
@@ -34,7 +34,7 @@
         DataHeaderItem.Dispose()
         DataHeaderItem = New DataSet
 
-        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "Header_Get"}
+        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "ItemHeader_Get"}
         With SqlCMD.Parameters
             .Clear()
             .AddWithValue("isAll", isAll)
@@ -63,7 +63,7 @@
         If Not dbOpen() Then
             Throw New Exception("Database Can't Open")
         End If
-        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "Header_Del"}
+        SqlCMD = New SqlClient.SqlCommand With {.CommandType = CommandType.StoredProcedure, .Connection = sqlConn, .CommandText = "ItemHeader_Del"}
         With SqlCMD.Parameters
             .Clear()
             .AddWithValue("id", id)

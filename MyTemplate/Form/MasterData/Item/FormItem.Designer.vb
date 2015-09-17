@@ -25,7 +25,6 @@ Partial Class FormItem
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.txtNamaItem = New DevExpress.XtraEditors.TextEdit()
         Me.txtAccNoItem = New DevExpress.XtraEditors.TextEdit()
-        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
         Me.DateEditItem = New DevExpress.XtraEditors.DateEdit()
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         Me.BtnCancelItem = New DevExpress.XtraEditors.SimpleButton()
@@ -44,18 +43,19 @@ Partial Class FormItem
         Me.txtQty = New DevExpress.XtraEditors.TextEdit()
         Me.txtUnit = New DevExpress.XtraEditors.TextEdit()
         Me.txtCost = New DevExpress.XtraEditors.TextEdit()
+        Me.CheckEdit1 = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.LookUpItemType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNamaItem.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAccNoItem.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditItem.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditItem.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadioGroup1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtQty.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUnit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCost.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LookUpItemType
@@ -109,17 +109,6 @@ Partial Class FormItem
         Me.txtAccNoItem.TabIndex = 6
         Me.txtAccNoItem.Tag = "input"
         '
-        'CheckEdit1
-        '
-        Me.CheckEdit1.Location = New System.Drawing.Point(826, 54)
-        Me.CheckEdit1.Name = "CheckEdit1"
-        Me.CheckEdit1.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckEdit1.Properties.Appearance.Options.UseFont = True
-        Me.CheckEdit1.Properties.Caption = "Suspended"
-        Me.CheckEdit1.Size = New System.Drawing.Size(175, 22)
-        Me.CheckEdit1.TabIndex = 43
-        Me.CheckEdit1.Tag = "input"
-        '
         'DateEditItem
         '
         Me.DateEditItem.EditValue = Nothing
@@ -147,7 +136,7 @@ Partial Class FormItem
         Me.BtnCancelItem.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelItem.Appearance.Options.UseFont = True
         Me.BtnCancelItem.Image = CType(resources.GetObject("BtnCancelItem.Image"), System.Drawing.Image)
-        Me.BtnCancelItem.Location = New System.Drawing.Point(426, 184)
+        Me.BtnCancelItem.Location = New System.Drawing.Point(404, 184)
         Me.BtnCancelItem.Name = "BtnCancelItem"
         Me.BtnCancelItem.Size = New System.Drawing.Size(80, 40)
         Me.BtnCancelItem.TabIndex = 4
@@ -159,7 +148,7 @@ Partial Class FormItem
         Me.BtnSaveItem.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSaveItem.Appearance.Options.UseFont = True
         Me.BtnSaveItem.Image = CType(resources.GetObject("BtnSaveItem.Image"), System.Drawing.Image)
-        Me.BtnSaveItem.Location = New System.Drawing.Point(328, 184)
+        Me.BtnSaveItem.Location = New System.Drawing.Point(318, 184)
         Me.BtnSaveItem.Name = "BtnSaveItem"
         Me.BtnSaveItem.Size = New System.Drawing.Size(80, 40)
         Me.BtnSaveItem.TabIndex = 3
@@ -171,19 +160,19 @@ Partial Class FormItem
         Me.BtnDelItem.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDelItem.Appearance.Options.UseFont = True
         Me.BtnDelItem.Image = CType(resources.GetObject("BtnDelItem.Image"), System.Drawing.Image)
-        Me.BtnDelItem.Location = New System.Drawing.Point(232, 184)
+        Me.BtnDelItem.Location = New System.Drawing.Point(212, 184)
         Me.BtnDelItem.Name = "BtnDelItem"
-        Me.BtnDelItem.Size = New System.Drawing.Size(80, 40)
+        Me.BtnDelItem.Size = New System.Drawing.Size(100, 40)
         Me.BtnDelItem.TabIndex = 2
         Me.BtnDelItem.Tag = "view"
-        Me.BtnDelItem.Text = "Delete"
+        Me.BtnDelItem.Text = "Non Active"
         '
         'BtnEditItem
         '
         Me.BtnEditItem.Appearance.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditItem.Appearance.Options.UseFont = True
         Me.BtnEditItem.Image = CType(resources.GetObject("BtnEditItem.Image"), System.Drawing.Image)
-        Me.BtnEditItem.Location = New System.Drawing.Point(136, 184)
+        Me.BtnEditItem.Location = New System.Drawing.Point(126, 184)
         Me.BtnEditItem.Name = "BtnEditItem"
         Me.BtnEditItem.Size = New System.Drawing.Size(80, 40)
         Me.BtnEditItem.TabIndex = 1
@@ -300,11 +289,20 @@ Partial Class FormItem
         Me.txtCost.TabIndex = 11
         Me.txtCost.Tag = "input"
         '
+        'CheckEdit1
+        '
+        Me.CheckEdit1.Location = New System.Drawing.Point(545, 254)
+        Me.CheckEdit1.Name = "CheckEdit1"
+        Me.CheckEdit1.Properties.Caption = "Suspended"
+        Me.CheckEdit1.Size = New System.Drawing.Size(88, 22)
+        Me.CheckEdit1.TabIndex = 54
+        '
         'FormItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 661)
+        Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.txtCost)
         Me.Controls.Add(Me.txtUnit)
         Me.Controls.Add(Me.txtQty)
@@ -316,7 +314,6 @@ Partial Class FormItem
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.txtNamaItem)
         Me.Controls.Add(Me.txtAccNoItem)
-        Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.DateEditItem)
         Me.Controls.Add(Me.LabelControl7)
         Me.Controls.Add(Me.BtnCancelItem)
@@ -336,13 +333,13 @@ Partial Class FormItem
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNamaItem.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtAccNoItem.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditItem.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditItem.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadioGroup1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtQty.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUnit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCost.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CheckEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -352,7 +349,6 @@ Partial Class FormItem
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents txtNamaItem As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtAccNoItem As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents DateEditItem As DevExpress.XtraEditors.DateEdit
     Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents BtnCancelItem As DevExpress.XtraEditors.SimpleButton
@@ -371,4 +367,5 @@ Partial Class FormItem
     Friend WithEvents txtQty As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtUnit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtCost As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents CheckEdit1 As DevExpress.XtraEditors.CheckEdit
 End Class

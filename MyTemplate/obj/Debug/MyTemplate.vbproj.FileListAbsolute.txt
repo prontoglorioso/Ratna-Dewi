@@ -93,7 +93,6 @@ C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\D
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormCustomer.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormDeposit.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormDO.resources
-C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormDummy.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormEmployee.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormHeaderItem.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormItem.resources
@@ -110,8 +109,6 @@ C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\D
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormSO.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormSR.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormTaxes.resources
-C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormTemplate.resources
-C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormTest.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormUser.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormVendor.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.HeaderDeposit.resources
@@ -129,7 +126,6 @@ C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\D
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.RichEdit.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.SplashScreen1.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.COA.resources
-C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormReceiveItem.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.MainForm.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.Resources.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ReportCustomer.resources
@@ -143,3 +139,10 @@ C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\D
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ReportListItem.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListChartOfAccount.resources
 C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ReportChartOfAccount.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListCustomer.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListEmployee.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListProject.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListVendor.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListJV.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.ListTax.resources
+C:\Users\Ratna\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.DetailRI.resources
