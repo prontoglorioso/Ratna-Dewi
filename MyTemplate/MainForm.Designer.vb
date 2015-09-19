@@ -159,6 +159,8 @@ Partial Class MainForm
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.BarButtonItem65 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem66 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarSubItem6 = New DevExpress.XtraBars.BarSubItem()
+        Me.BarButtonItem70 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,15 +170,15 @@ Partial Class MainForm
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.SkinRibbonGalleryBarItem1, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem5, Me.RibbonGalleryBarItem1, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem15, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BarButtonItem21, Me.BarSubItem1, Me.BarSubItem2, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem24, Me.BarButtonItem25, Me.BarSubItem3, Me.BarSubItem4, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem30, Me.BarButtonItem31, Me.BarButtonItem32, Me.BarButtonItem33, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.RibbonGalleryBarItem2, Me.SkinRibbonGalleryBarItem4, Me.BarSubItem5, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem50, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem54, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem59, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem62, Me.BarButtonItem63, Me.BarButtonItem64, Me.BarButtonItem67, Me.BarButtonItem68, Me.BarButtonItem69})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.SkinRibbonGalleryBarItem1, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BarButtonItem11, Me.SkinRibbonGalleryBarItem2, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem5, Me.RibbonGalleryBarItem1, Me.SkinRibbonGalleryBarItem3, Me.BarButtonItem15, Me.BarButtonItem16, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BarButtonItem21, Me.BarSubItem1, Me.BarSubItem2, Me.BarButtonItem22, Me.BarButtonItem23, Me.BarButtonItem24, Me.BarButtonItem25, Me.BarSubItem3, Me.BarSubItem4, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29, Me.BarButtonItem30, Me.BarButtonItem31, Me.BarButtonItem32, Me.BarButtonItem33, Me.BarButtonItem34, Me.BarButtonItem35, Me.BarButtonItem36, Me.BarButtonItem37, Me.BarButtonItem38, Me.BarButtonItem39, Me.BarButtonItem40, Me.BarButtonItem41, Me.BarButtonItem42, Me.BarButtonItem43, Me.RibbonGalleryBarItem2, Me.SkinRibbonGalleryBarItem4, Me.BarSubItem5, Me.BarButtonItem44, Me.BarButtonItem45, Me.BarButtonItem46, Me.BarButtonItem47, Me.BarButtonItem48, Me.BarButtonItem49, Me.BarButtonItem50, Me.BarButtonItem51, Me.BarButtonItem52, Me.BarButtonItem53, Me.BarButtonItem54, Me.BarButtonItem55, Me.BarButtonItem56, Me.BarButtonItem57, Me.BarButtonItem58, Me.BarButtonItem59, Me.BarButtonItem60, Me.BarButtonItem61, Me.BarButtonItem62, Me.BarButtonItem63, Me.BarButtonItem64, Me.BarButtonItem67, Me.BarButtonItem68, Me.BarButtonItem69, Me.BarSubItem6, Me.BarButtonItem70})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.Margin = New System.Windows.Forms.Padding(5)
-        Me.RibbonControl.MaxItemId = 83
+        Me.RibbonControl.MaxItemId = 85
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2, Me.RibbonPage4, Me.RibbonPage3, Me.RibbonPage6, Me.RibbonPage7, Me.RibbonPage8})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCheckEdit1})
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
-        Me.RibbonControl.Size = New System.Drawing.Size(1077, 150)
+        Me.RibbonControl.Size = New System.Drawing.Size(1028, 150)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
         'BarButtonItem1
@@ -796,6 +798,7 @@ Partial Class MainForm
         Me.RibbonPageGroup9.AllowTextClipping = False
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem68)
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem69)
+        Me.RibbonPageGroup9.ItemLinks.Add(Me.BarSubItem6)
         Me.RibbonPageGroup9.Name = "RibbonPageGroup9"
         Me.RibbonPageGroup9.ShowCaptionButton = False
         Me.RibbonPageGroup9.Text = "TRANSACTION"
@@ -929,7 +932,7 @@ Partial Class MainForm
         Me.RibbonStatusBar.Margin = New System.Windows.Forms.Padding(5)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(1077, 23)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(1028, 23)
         Me.RibbonStatusBar.ToolTipController = Me.toolTip
         '
         'toolTip
@@ -1110,6 +1113,19 @@ Partial Class MainForm
         Me.BarButtonItem66.Name = "BarButtonItem66"
         Me.BarButtonItem66.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
+        'BarSubItem6
+        '
+        Me.BarSubItem6.Caption = "BarSubItem6"
+        Me.BarSubItem6.Id = 83
+        Me.BarSubItem6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem70)})
+        Me.BarSubItem6.Name = "BarSubItem6"
+        '
+        'BarButtonItem70
+        '
+        Me.BarButtonItem70.Caption = "BarButtonItem70"
+        Me.BarButtonItem70.Id = 84
+        Me.BarButtonItem70.Name = "BarButtonItem70"
+        '
         'MainForm
         '
         Me.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -1117,7 +1133,7 @@ Partial Class MainForm
         Me.Appearance.Options.UseForeColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1077, 639)
+        Me.ClientSize = New System.Drawing.Size(1028, 639)
         Me.Controls.Add(Me.NavBarControl1)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
@@ -1277,6 +1293,8 @@ Partial Class MainForm
     Friend WithEvents RibbonPageGroup19 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem68 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem69 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarSubItem6 As DevExpress.XtraBars.BarSubItem
+    Friend WithEvents BarButtonItem70 As DevExpress.XtraBars.BarButtonItem
 
 
 End Class

@@ -22,6 +22,11 @@
 #End Region
 
 #Region "Form Event"
+
+    Private Sub DetailRI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Me.Dispose()
+
+    End Sub
     Private Sub FormReceiveItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DataSetRI.SelectSubAccCOADataTable' table. You can move, or remove it, as needed.
         Me.SelectSubAccCOADataTableTableAdapter.Fill(Me.DataSetRI.SelectSubAccCOADataTable)
@@ -29,6 +34,7 @@
         groupControlHeaderRI.Enabled = False
 
         LoadItem()
+
 
 
     End Sub
@@ -80,7 +86,7 @@
     End Sub
     Private Sub buttonSave_Click(sender As Object, e As EventArgs) Handles buttonSave.Click
         SaveHeaderRI()
-        'SaveDetailRi()
+        SaveDetailRi()
 
 
 
@@ -91,6 +97,15 @@
     End Sub
 #End Region
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+
+        'If Len(Trim(IDTextBox.Text)) = 0 Then
+        '    alert.Show(Me, "Attention", "Data RI main must" & vbNewLine & " be filled before adding new detail value")
+        '    Exit Sub
+        'Else
+
+        'End If
+
+
         GridView1.AddNewRow()
         GridView1.SetFocusedRowCellValue(colIDHeaderRI, IDTextEdit.Text)
         LoadIdHeaderRI()
@@ -137,8 +152,7 @@
     Private Sub GridView3_DoubleClick(sender As Object, e As EventArgs) Handles GridView3.DoubleClick
         Cursor = Cursors.WaitCursor
         ChooseItem()
-        RepositoryItemPopupContainerEdit1.Dispose()
-
+        SetEditorValue()
         Cursor = Cursors.Default
     End Sub
 
@@ -153,17 +167,33 @@
             itemQuantity = GridView3.GetFocusedRowCellValue(colQty2).ToString
             itemName = GridView3.GetFocusedRowCellValue(colnamaItem2).ToString
 
+            If Not RepositoryItemPopupContainerEdit1.OwnerEdit Is Nothing Then
+                RepositoryItemPopupContainerEdit1.OwnerEdit.ClosePopup()
+
+            End If
+
+
             'If Not PCC1.OwnerEdit Is Nothing Then
             '    PCC1.OwnerEdit.ClosePopup()
             'End If
 
-            PCC1.OwnerEdit.ClosePopup()
+            'PCC1.OwnerEdit.ClosePopup()
 
+        Catch ex As Exception
+            alert.Show(Me, "Check On ChooseItem()", ex.Message)
+        End Try
+    End Sub
+    Private Sub SetEditorValue()
+        Try
+            GridView1.ShowEditor()
+
+            GridView1.SetFocusedRowCellValue(colIDDetailPO, idItem)
+            GridView1.SetFocusedRowCellValue(colnamaItem1, itemName)
+            GridView1.SetFocusedRowCellValue(colQty1, itemQuantity)
         Catch ex As Exception
 
         End Try
     End Sub
-
     Private Sub PCC1_Leave(sender As Object, e As EventArgs) Handles PCC1.Leave
 
     End Sub
@@ -179,4 +209,26 @@
     '    GridView3.SetFocusedRowCellValue(colnamaItem2, itemName)
     '    GridView3.SetFocusedRowCellValue(colQty2, itemQuantity)
     'End Sub
+
+    Private Sub RepositoryItemPopupContainerEdit1_QueryResultValue(sender As Object, e As Controls.QueryResultValueEventArgs) Handles RepositoryItemPopupContainerEdit1.QueryResultValue
+
+        Try
+            If GridView3.RowCount > 0 Then
+                e.Value = idItem
+                BeginInvoke(New MethodInvoker(AddressOf SetEditorValue))
+            End If
+        Catch ex As Exception
+            alert.Show(Me, "", "Check QueryResult")
+        End Try
+      
+
+    End Sub
+
+    Private Sub GridView3_KeyDown(sender As Object, e As KeyEventArgs) Handles GridView3.KeyDown
+        Cursor = Cursors.WaitCursor
+        ChooseItem()
+        SetEditorValue()
+
+        Cursor = Cursors.Default
+    End Sub
 End Class

@@ -194,6 +194,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPO.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseRelatedObject\DataSetPO.vb">
+      <DependentUpon>DataSetPO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseRelatedObject\DataSetReport.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -278,6 +281,24 @@
       <DependentUpon>ListVendor.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\MasterData\Vendor\ListVendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Purchase\DetailP1O.Designer.vb">
+      <DependentUpon>DetailP1O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Purchase\DetailP1O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Purchase\DetailPO.Designer.vb">
+      <DependentUpon>DetailPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Purchase\DetailPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Purchase\FormPurchaseInvoiceHeader.Designer.vb">
+      <DependentUpon>FormPurchaseInvoiceHeader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Purchase\FormPurchaseInvoiceHeader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Sales\DetailDO.Designer.vb">
@@ -544,12 +565,6 @@
     <Compile Include="Form\Undefined\SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Purchase\DetailPO.Designer.vb">
-      <DependentUpon>DetailPO.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Purchase\DetailPO.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\Purchase\DetailRI.Designer.vb">
       <DependentUpon>DetailRI.vb</DependentUpon>
     </Compile>
@@ -655,6 +670,15 @@
     <EmbeddedResource Include="Form\MasterData\Vendor\ListVendor.resx">
       <DependentUpon>ListVendor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Purchase\DetailP1O.resx">
+      <DependentUpon>DetailP1O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Purchase\DetailPO.resx">
+      <DependentUpon>DetailPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Purchase\FormPurchaseInvoiceHeader.resx">
+      <DependentUpon>FormPurchaseInvoiceHeader.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Sales\DetailDO.resx">
       <DependentUpon>DetailDO.vb</DependentUpon>
     </EmbeddedResource>
@@ -666,9 +690,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Purchase\DetailPI.resx">
       <DependentUpon>DetailPI.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Purchase\DetailPO.resx">
-      <DependentUpon>DetailPO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Purchase\DetailPP.resx">
       <DependentUpon>DetailPP.vb</DependentUpon>

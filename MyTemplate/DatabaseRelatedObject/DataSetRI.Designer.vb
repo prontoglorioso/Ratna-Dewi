@@ -1574,9 +1574,7 @@ Partial Public Class DataSetRI
             Me.columnID.AllowDBNull = False
             Me.columnID.ReadOnly = True
             Me.columnID.Unique = True
-            Me.columnnamaItem.AllowDBNull = False
             Me.columnnamaItem.MaxLength = 50
-            Me.columnQty.AllowDBNull = False
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -2598,7 +2596,11 @@ Partial Public Class DataSetRI
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Property namaItem() As String
             Get
-                Return CType(Me(Me.tableSP_Select_Item_DetalRI.namaItemColumn), String)
+                Try
+                    Return CType(Me(Me.tableSP_Select_Item_DetalRI.namaItemColumn), String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'namaItem' in table 'SP_Select_Item_DetalRI' is DBNull.", e)
+                End Try
             End Get
             Set(value As String)
                 Me(Me.tableSP_Select_Item_DetalRI.namaItemColumn) = value
@@ -2609,12 +2611,40 @@ Partial Public Class DataSetRI
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Property Qty() As Integer
             Get
-                Return CType(Me(Me.tableSP_Select_Item_DetalRI.QtyColumn), Integer)
+                Try
+                    Return CType(Me(Me.tableSP_Select_Item_DetalRI.QtyColumn), Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Qty' in table 'SP_Select_Item_DetalRI' is DBNull.", e)
+                End Try
             End Get
             Set(value As Integer)
                 Me(Me.tableSP_Select_Item_DetalRI.QtyColumn) = value
             End Set
         End Property
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Function IsnamaItemNull() As Boolean
+            Return Me.IsNull(Me.tableSP_Select_Item_DetalRI.namaItemColumn)
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Sub SetnamaItemNull()
+            Me(Me.tableSP_Select_Item_DetalRI.namaItemColumn) = Global.System.Convert.DBNull
+        End Sub
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Function IsQtyNull() As Boolean
+            Return Me.IsNull(Me.tableSP_Select_Item_DetalRI.QtyColumn)
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Sub SetQtyNull()
+            Me(Me.tableSP_Select_Item_DetalRI.QtyColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
 
     '''<summary>

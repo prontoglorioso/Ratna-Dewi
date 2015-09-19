@@ -11,6 +11,7 @@
         LoadDataHeader()
         LoadDataPODetail()
         Me.Text = "Purchase Order Detail"
+        XtraMessageBox.Show(idHeaderPO)
     End Sub
     Sub LoadDataPODetail()
         Try
@@ -18,6 +19,9 @@
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+
+        GridView1.Columns(0).Visible = False
+        GridView1.Columns(1).Visible = False
     End Sub
     Sub SaveDataPoDetail()
         Me.Validate()

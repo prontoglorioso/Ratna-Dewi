@@ -11,6 +11,7 @@
         SetFormAttribute()
         CanClose = True
         LoadData()
+
     End Sub
     Private Sub SimpleButton5_Click(sender As Object, e As EventArgs) Handles SimpleButton5.Click
         If XtraMessageBox.Show("Apakah anda yakin akan menghapus data ini", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
@@ -41,6 +42,7 @@
         idHeaderPO = Convert.ToInt32(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(0)))
         DetailPO.idHeaderPO = idHeaderPO
         DetailPO.ShowDialog()
+        Me.Dispose()
 
     End Sub
 

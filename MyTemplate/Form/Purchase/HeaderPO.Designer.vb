@@ -30,19 +30,20 @@ Partial Class HeaderPO
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIDVendor = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.LookUpEditVendor = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.SelectVendorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.SelectVendorBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.coltglPO = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.DateEditPO = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.colNoPO = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colDescriptionPO = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIDSubAccCOA = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LookUpEditSubAccCOA = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectSubAccCOABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.colTotalOrder = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colisDeleted = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.Detail = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colTotal = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colAction = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ButtonDetail = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.LookUpEditVendor = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.SelectVendorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DateEditPO = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.POHeader_SelectTableAdapter = New MyTemplate.DataSetSPPKTableAdapters.POHeader_SelectTableAdapter()
         Me.TableAdapterManager = New MyTemplate.DataSetSPPKTableAdapters.TableAdapterManager()
         Me.SelectVendorTableAdapter = New MyTemplate.DataSetSPPKTableAdapters.SelectVendorTableAdapter()
@@ -53,13 +54,15 @@ Partial Class HeaderPO
         CType(Me.POHeader_SelectBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetSPPK, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectVendorBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LookUpEditSubAccCOA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectSubAccCOABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ButtonDetail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditVendor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectVendorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditPO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateEditPO.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LookUpEditSubAccCOA, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectSubAccCOABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ButtonDetail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SimpleButton3
@@ -101,7 +104,7 @@ Partial Class HeaderPO
         Me.GridControl1.Location = New System.Drawing.Point(12, 34)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.LookUpEditVendor, Me.LookUpEditSubAccCOA, Me.ButtonDetail, Me.DateEditPO})
+        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.LookUpEditVendor, Me.LookUpEditSubAccCOA, Me.ButtonDetail, Me.DateEditPO, Me.RepositoryItemLookUpEdit1})
         Me.GridControl1.Size = New System.Drawing.Size(881, 383)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -118,7 +121,7 @@ Partial Class HeaderPO
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDVendor, Me.coltglPO, Me.colNoPO, Me.colDescriptionPO, Me.colIDSubAccCOA, Me.colTotalOrder, Me.colisDeleted, Me.Detail})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDVendor, Me.coltglPO, Me.colNoPO, Me.colDescriptionPO, Me.colIDSubAccCOA, Me.colTotal, Me.colAction})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace
@@ -130,52 +133,40 @@ Partial Class HeaderPO
         '
         Me.colID.FieldName = "ID"
         Me.colID.Name = "colID"
-        Me.colID.OptionsColumn.ReadOnly = True
         Me.colID.Visible = True
         Me.colID.VisibleIndex = 0
         '
         'colIDVendor
         '
-        Me.colIDVendor.Caption = "Vendor Name"
-        Me.colIDVendor.ColumnEdit = Me.LookUpEditVendor
+        Me.colIDVendor.ColumnEdit = Me.RepositoryItemLookUpEdit1
         Me.colIDVendor.FieldName = "IDVendor"
         Me.colIDVendor.Name = "colIDVendor"
         Me.colIDVendor.Visible = True
         Me.colIDVendor.VisibleIndex = 1
         '
-        'LookUpEditVendor
+        'RepositoryItemLookUpEdit1
         '
-        Me.LookUpEditVendor.AutoHeight = False
-        Me.LookUpEditVendor.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LookUpEditVendor.DataSource = Me.SelectVendorBindingSource
-        Me.LookUpEditVendor.DisplayMember = "nama"
-        Me.LookUpEditVendor.Name = "LookUpEditVendor"
-        Me.LookUpEditVendor.ValueMember = "id"
+        Me.RepositoryItemLookUpEdit1.AutoHeight = False
+        Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemLookUpEdit1.DataSource = Me.SelectVendorBindingSource1
+        Me.RepositoryItemLookUpEdit1.DisplayMember = "nama"
+        Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
+        Me.RepositoryItemLookUpEdit1.ValueMember = "id"
         '
-        'SelectVendorBindingSource
+        'SelectVendorBindingSource1
         '
-        Me.SelectVendorBindingSource.DataMember = "SelectVendor"
-        Me.SelectVendorBindingSource.DataSource = Me.DataSetSPPK
+        Me.SelectVendorBindingSource1.DataMember = "SelectVendor"
+        Me.SelectVendorBindingSource1.DataSource = Me.DataSetSPPK
         '
         'coltglPO
         '
-        Me.coltglPO.Caption = "PO Date"
-        Me.coltglPO.ColumnEdit = Me.DateEditPO
         Me.coltglPO.FieldName = "tglPO"
         Me.coltglPO.Name = "coltglPO"
         Me.coltglPO.Visible = True
         Me.coltglPO.VisibleIndex = 2
         '
-        'DateEditPO
-        '
-        Me.DateEditPO.AutoHeight = False
-        Me.DateEditPO.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEditPO.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEditPO.Name = "DateEditPO"
-        '
         'colNoPO
         '
-        Me.colNoPO.Caption = "PO No."
         Me.colNoPO.FieldName = "NoPO"
         Me.colNoPO.Name = "colNoPO"
         Me.colNoPO.Visible = True
@@ -183,7 +174,6 @@ Partial Class HeaderPO
         '
         'colDescriptionPO
         '
-        Me.colDescriptionPO.Caption = "PO Description"
         Me.colDescriptionPO.FieldName = "DescriptionPO"
         Me.colDescriptionPO.Name = "colDescriptionPO"
         Me.colDescriptionPO.Visible = True
@@ -191,7 +181,6 @@ Partial Class HeaderPO
         '
         'colIDSubAccCOA
         '
-        Me.colIDSubAccCOA.Caption = "Chart Of Account"
         Me.colIDSubAccCOA.ColumnEdit = Me.LookUpEditSubAccCOA
         Me.colIDSubAccCOA.FieldName = "IDSubAccCOA"
         Me.colIDSubAccCOA.Name = "colIDSubAccCOA"
@@ -212,29 +201,22 @@ Partial Class HeaderPO
         Me.SelectSubAccCOABindingSource.DataMember = "SelectSubAccCOA"
         Me.SelectSubAccCOABindingSource.DataSource = Me.DataSetSPPK
         '
-        'colTotalOrder
+        'colTotal
         '
-        Me.colTotalOrder.Caption = "Total Order"
-        Me.colTotalOrder.FieldName = "TotalOrder"
-        Me.colTotalOrder.Name = "colTotalOrder"
-        Me.colTotalOrder.Visible = True
-        Me.colTotalOrder.VisibleIndex = 6
+        Me.colTotal.DisplayFormat.FormatString = "n"
+        Me.colTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.colTotal.FieldName = "Total"
+        Me.colTotal.Name = "colTotal"
+        Me.colTotal.Visible = True
+        Me.colTotal.VisibleIndex = 6
         '
-        'colisDeleted
+        'colAction
         '
-        Me.colisDeleted.Caption = "Close"
-        Me.colisDeleted.FieldName = "isDeleted"
-        Me.colisDeleted.Name = "colisDeleted"
-        Me.colisDeleted.Visible = True
-        Me.colisDeleted.VisibleIndex = 7
-        '
-        'Detail
-        '
-        Me.Detail.Caption = "GridColumn1"
-        Me.Detail.ColumnEdit = Me.ButtonDetail
-        Me.Detail.Name = "Detail"
-        Me.Detail.Visible = True
-        Me.Detail.VisibleIndex = 8
+        Me.colAction.Caption = "Action"
+        Me.colAction.ColumnEdit = Me.ButtonDetail
+        Me.colAction.Name = "colAction"
+        Me.colAction.Visible = True
+        Me.colAction.VisibleIndex = 7
         '
         'ButtonDetail
         '
@@ -242,6 +224,27 @@ Partial Class HeaderPO
         Me.ButtonDetail.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, CType(resources.GetObject("ButtonDetail.Buttons"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, "", Nothing, Nothing, True)})
         Me.ButtonDetail.Name = "ButtonDetail"
         Me.ButtonDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
+        'LookUpEditVendor
+        '
+        Me.LookUpEditVendor.AutoHeight = False
+        Me.LookUpEditVendor.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LookUpEditVendor.DataSource = Me.SelectVendorBindingSource
+        Me.LookUpEditVendor.DisplayMember = "nama"
+        Me.LookUpEditVendor.Name = "LookUpEditVendor"
+        Me.LookUpEditVendor.ValueMember = "id"
+        '
+        'SelectVendorBindingSource
+        '
+        Me.SelectVendorBindingSource.DataMember = "SelectVendor"
+        Me.SelectVendorBindingSource.DataSource = Me.DataSetSPPK
+        '
+        'DateEditPO
+        '
+        Me.DateEditPO.AutoHeight = False
+        Me.DateEditPO.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEditPO.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEditPO.Name = "DateEditPO"
         '
         'POHeader_SelectTableAdapter
         '
@@ -330,13 +333,15 @@ Partial Class HeaderPO
         CType(Me.POHeader_SelectBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetSPPK, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectVendorBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LookUpEditSubAccCOA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectSubAccCOABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ButtonDetail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditVendor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectVendorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditPO.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateEditPO, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LookUpEditSubAccCOA, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectSubAccCOABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ButtonDetail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -348,23 +353,24 @@ Partial Class HeaderPO
     Friend WithEvents POHeader_SelectBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents POHeader_SelectTableAdapter As MyTemplate.DataSetSPPKTableAdapters.POHeader_SelectTableAdapter
     Friend WithEvents TableAdapterManager As MyTemplate.DataSetSPPKTableAdapters.TableAdapterManager
-    Friend WithEvents colID As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIDVendor As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents LookUpEditVendor As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-    Friend WithEvents coltglPO As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colNoPO As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDescriptionPO As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIDSubAccCOA As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colTotalOrder As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colisDeleted As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SelectVendorBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectVendorTableAdapter As MyTemplate.DataSetSPPKTableAdapters.SelectVendorTableAdapter
     Friend WithEvents LookUpEditSubAccCOA As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
     Friend WithEvents SelectSubAccCOABindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectSubAccCOATableAdapter As MyTemplate.DataSetSPPKTableAdapters.SelectSubAccCOATableAdapter
-    Friend WithEvents Detail As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ButtonDetail As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
     Friend WithEvents DateEditPO As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents colID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIDVendor As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents coltglPO As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colNoPO As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDescriptionPO As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIDSubAccCOA As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colTotal As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colAction As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents SelectVendorBindingSource1 As System.Windows.Forms.BindingSource
 End Class

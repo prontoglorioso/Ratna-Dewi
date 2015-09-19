@@ -53,6 +53,9 @@ Partial Class DetailRI
         Me.SP_Select_Item_DetalRIBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSetRISelectItem2 = New MyTemplate.DataSetRI()
         Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colID2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colnamaItem2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colQty2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
         Me.DetailRIDataTableGridControl = New DevExpress.XtraGrid.GridControl()
@@ -85,9 +88,6 @@ Partial Class DetailRI
         Me.GetIdHeaderRIBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GetIdHeaderRITableAdapter = New MyTemplate.DataSetRITableAdapters.getIdHeaderRITableAdapter()
         Me.IDTextBox = New System.Windows.Forms.TextBox()
-        Me.colID2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colnamaItem2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colQty2 = New DevExpress.XtraGrid.Columns.GridColumn()
         NamaLabel = New System.Windows.Forms.Label()
         TglPOLabel = New System.Windows.Forms.Label()
         DescriptionPOLabel = New System.Windows.Forms.Label()
@@ -409,11 +409,10 @@ Partial Class DetailRI
         'SP_Select_Item_DetalRIGridControl1
         '
         Me.SP_Select_Item_DetalRIGridControl1.DataSource = Me.SP_Select_Item_DetalRIBindingSource1
-        Me.SP_Select_Item_DetalRIGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SP_Select_Item_DetalRIGridControl1.Location = New System.Drawing.Point(0, 0)
         Me.SP_Select_Item_DetalRIGridControl1.MainView = Me.GridView3
         Me.SP_Select_Item_DetalRIGridControl1.Name = "SP_Select_Item_DetalRIGridControl1"
-        Me.SP_Select_Item_DetalRIGridControl1.Size = New System.Drawing.Size(355, 190)
+        Me.SP_Select_Item_DetalRIGridControl1.Size = New System.Drawing.Size(352, 190)
         Me.SP_Select_Item_DetalRIGridControl1.TabIndex = 3
         Me.SP_Select_Item_DetalRIGridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -432,6 +431,27 @@ Partial Class DetailRI
         Me.GridView3.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID2, Me.colnamaItem2, Me.colQty2})
         Me.GridView3.GridControl = Me.SP_Select_Item_DetalRIGridControl1
         Me.GridView3.Name = "GridView3"
+        '
+        'colID2
+        '
+        Me.colID2.FieldName = "ID"
+        Me.colID2.Name = "colID2"
+        Me.colID2.Visible = True
+        Me.colID2.VisibleIndex = 0
+        '
+        'colnamaItem2
+        '
+        Me.colnamaItem2.FieldName = "namaItem"
+        Me.colnamaItem2.Name = "colnamaItem2"
+        Me.colnamaItem2.Visible = True
+        Me.colnamaItem2.VisibleIndex = 1
+        '
+        'colQty2
+        '
+        Me.colQty2.FieldName = "Qty"
+        Me.colQty2.Name = "colQty2"
+        Me.colQty2.Visible = True
+        Me.colQty2.VisibleIndex = 2
         '
         'SimpleButton1
         '
@@ -646,28 +666,7 @@ Partial Class DetailRI
         Me.IDTextBox.Size = New System.Drawing.Size(100, 21)
         Me.IDTextBox.TabIndex = 42
         '
-        'colID2
-        '
-        Me.colID2.FieldName = "ID"
-        Me.colID2.Name = "colID2"
-        Me.colID2.Visible = True
-        Me.colID2.VisibleIndex = 0
-        '
-        'colnamaItem2
-        '
-        Me.colnamaItem2.FieldName = "namaItem"
-        Me.colnamaItem2.Name = "colnamaItem2"
-        Me.colnamaItem2.Visible = True
-        Me.colnamaItem2.VisibleIndex = 1
-        '
-        'colQty2
-        '
-        Me.colQty2.FieldName = "Qty"
-        Me.colQty2.Name = "colQty2"
-        Me.colQty2.Visible = True
-        Me.colQty2.VisibleIndex = 2
-        '
-        'FormReceiveItem
+        'DetailRI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -678,7 +677,7 @@ Partial Class DetailRI
         Me.Controls.Add(Me.buttonAddNew)
         Me.Controls.Add(Me.groupControlHeaderRI)
         Me.Controls.Add(Me.GroupControl1)
-        Me.Name = "FormReceiveItem"
+        Me.Name = "DetailRI"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormReceiveItem"
         CType(Me.SelectHeaderPO_DetailBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -769,18 +768,18 @@ Partial Class DetailRI
     Friend WithEvents colQtyDiterima As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents DetailRITableAdapter As MyTemplate.DataSetRITableAdapters.DetailRITableAdapter
     Friend WithEvents TableAdapterManagerDetailRI As MyTemplate.DataSetRITableAdapters.TableAdapterManager
-    Friend WithEvents PCC1 As DevExpress.XtraEditors.PopupContainerControl
     Friend WithEvents RepositoryItemPopupContainerEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit
-    Friend WithEvents SP_Select_Item_DetalRIGridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents SP_Select_Item_DetalRIBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents DataSetRISelectItem2 As MyTemplate.DataSetRI
-    Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents SP_Select_Item_DetalRITableAdapter1 As MyTemplate.DataSetRITableAdapters.SP_Select_Item_DetalRITableAdapter
     Friend WithEvents TableAdapterManagerIDHeaderRI As MyTemplate.DataSetRITableAdapters.TableAdapterManager
     Friend WithEvents textEditIDHeaderRI As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
     Friend WithEvents GetIdHeaderRIBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents GetIdHeaderRITableAdapter As MyTemplate.DataSetRITableAdapters.getIdHeaderRITableAdapter
     Friend WithEvents IDTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents PCC1 As DevExpress.XtraEditors.PopupContainerControl
+    Friend WithEvents SP_Select_Item_DetalRIGridControl1 As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents colID2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colnamaItem2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colQty2 As DevExpress.XtraGrid.Columns.GridColumn

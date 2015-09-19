@@ -28,17 +28,18 @@ Partial Class DetailPO
         Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIDHeader = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIDItem = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.lookUpEditItem = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.SelectItemPODetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.colQty = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIDTax = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.lookUpEditTax = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.SelectTaxDataTableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.colUnitPrice = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIDProject = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDiTerima = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colSisaPermintaan = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.lookUpEditItem = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.SelectItemPODetailBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.lookUpEditTax = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.SelectTaxDataTableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.lookUpEditProject = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectProjectDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.colClose = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.SelectTaxDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
@@ -53,7 +54,7 @@ Partial Class DetailPO
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.PODetailtableAdapter = New MyTemplate.DataSetPOTableAdapters.PODetailtableAdapter()
+        Me.PODetailtableAdapter = New MyTemplate.DataSetPOTableAdapters.PODetailTableAdapter()
         Me.TableAdapterManagerPoDetail = New MyTemplate.DataSetPOTableAdapters.TableAdapterManager()
         Me.SelectHeaderPO_DetailTableAdapter = New MyTemplate.DataSetPOTableAdapters.SelectHeaderPO_DetailTableAdapter()
         Me.SelectItemPODetailTableAdapter = New MyTemplate.DataSetPOTableAdapters.SelectItemPODetailTableAdapter()
@@ -114,7 +115,7 @@ Partial Class DetailPO
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDHeader, Me.colIDItem, Me.colQty, Me.colIDTax, Me.colUnitPrice, Me.colIDProject, Me.colClose})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDHeader, Me.colIDItem, Me.colQty, Me.colIDTax, Me.colUnitPrice, Me.colIDProject, Me.colDiTerima, Me.colSisaPermintaan})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace
@@ -123,7 +124,6 @@ Partial Class DetailPO
         '
         Me.colID.FieldName = "ID"
         Me.colID.Name = "colID"
-        Me.colID.OptionsColumn.ReadOnly = True
         Me.colID.Visible = True
         Me.colID.VisibleIndex = 0
         '
@@ -142,20 +142,6 @@ Partial Class DetailPO
         Me.colIDItem.Visible = True
         Me.colIDItem.VisibleIndex = 2
         '
-        'lookUpEditItem
-        '
-        Me.lookUpEditItem.AutoHeight = False
-        Me.lookUpEditItem.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lookUpEditItem.DataSource = Me.SelectItemPODetailBindingSource
-        Me.lookUpEditItem.DisplayMember = "namaItem"
-        Me.lookUpEditItem.Name = "lookUpEditItem"
-        Me.lookUpEditItem.ValueMember = "id"
-        '
-        'SelectItemPODetailBindingSource
-        '
-        Me.SelectItemPODetailBindingSource.DataMember = "SelectItemPODetail"
-        Me.SelectItemPODetailBindingSource.DataSource = Me.DataSetPO
-        '
         'colQty
         '
         Me.colQty.FieldName = "Qty"
@@ -170,20 +156,6 @@ Partial Class DetailPO
         Me.colIDTax.Name = "colIDTax"
         Me.colIDTax.Visible = True
         Me.colIDTax.VisibleIndex = 4
-        '
-        'lookUpEditTax
-        '
-        Me.lookUpEditTax.AutoHeight = False
-        Me.lookUpEditTax.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lookUpEditTax.DataSource = Me.SelectTaxDataTableBindingSource1
-        Me.lookUpEditTax.DisplayMember = "namaPajak"
-        Me.lookUpEditTax.Name = "lookUpEditTax"
-        Me.lookUpEditTax.ValueMember = "id"
-        '
-        'SelectTaxDataTableBindingSource1
-        '
-        Me.SelectTaxDataTableBindingSource1.DataMember = "SelectTaxDataTable"
-        Me.SelectTaxDataTableBindingSource1.DataSource = Me.DataSetPO
         '
         'colUnitPrice
         '
@@ -200,6 +172,48 @@ Partial Class DetailPO
         Me.colIDProject.Visible = True
         Me.colIDProject.VisibleIndex = 6
         '
+        'colDiTerima
+        '
+        Me.colDiTerima.FieldName = "DiTerima"
+        Me.colDiTerima.Name = "colDiTerima"
+        Me.colDiTerima.Visible = True
+        Me.colDiTerima.VisibleIndex = 7
+        '
+        'colSisaPermintaan
+        '
+        Me.colSisaPermintaan.FieldName = "SisaPermintaan"
+        Me.colSisaPermintaan.Name = "colSisaPermintaan"
+        Me.colSisaPermintaan.Visible = True
+        Me.colSisaPermintaan.VisibleIndex = 8
+        '
+        'lookUpEditItem
+        '
+        Me.lookUpEditItem.AutoHeight = False
+        Me.lookUpEditItem.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.lookUpEditItem.DataSource = Me.SelectItemPODetailBindingSource
+        Me.lookUpEditItem.DisplayMember = "namaItem"
+        Me.lookUpEditItem.Name = "lookUpEditItem"
+        Me.lookUpEditItem.ValueMember = "id"
+        '
+        'SelectItemPODetailBindingSource
+        '
+        Me.SelectItemPODetailBindingSource.DataMember = "SelectItemPODetail"
+        Me.SelectItemPODetailBindingSource.DataSource = Me.DataSetPO
+        '
+        'lookUpEditTax
+        '
+        Me.lookUpEditTax.AutoHeight = False
+        Me.lookUpEditTax.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.lookUpEditTax.DataSource = Me.SelectTaxDataTableBindingSource1
+        Me.lookUpEditTax.DisplayMember = "namaPajak"
+        Me.lookUpEditTax.Name = "lookUpEditTax"
+        Me.lookUpEditTax.ValueMember = "id"
+        '
+        'SelectTaxDataTableBindingSource1
+        '
+        Me.SelectTaxDataTableBindingSource1.DataMember = "SelectTaxDataTable"
+        Me.SelectTaxDataTableBindingSource1.DataSource = Me.DataSetPO
+        '
         'lookUpEditProject
         '
         Me.lookUpEditProject.AutoHeight = False
@@ -213,13 +227,6 @@ Partial Class DetailPO
         '
         Me.SelectProjectDataTableBindingSource.DataMember = "SelectProjectDataTable"
         Me.SelectProjectDataTableBindingSource.DataSource = Me.DataSetPO
-        '
-        'colClose
-        '
-        Me.colClose.FieldName = "Close"
-        Me.colClose.Name = "colClose"
-        Me.colClose.Visible = True
-        Me.colClose.VisibleIndex = 7
         '
         'SelectTaxDataTableBindingSource
         '
@@ -349,7 +356,7 @@ Partial Class DetailPO
         'TableAdapterManagerPoDetail
         '
         Me.TableAdapterManagerPoDetail.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManagerPoDetail.PODetailtableAdapter = Me.PODetailtableAdapter
+        Me.TableAdapterManagerPoDetail.PODetailTableAdapter = Me.PODetailtableAdapter
         Me.TableAdapterManagerPoDetail.UpdateOrder = MyTemplate.DataSetPOTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'SelectHeaderPO_DetailTableAdapter
@@ -416,14 +423,6 @@ Partial Class DetailPO
     Friend WithEvents PODetailDataTableBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PODetailtableAdapter As MyTemplate.DataSetPOTableAdapters.PODetailtableAdapter
     Friend WithEvents TableAdapterManagerPoDetail As MyTemplate.DataSetPOTableAdapters.TableAdapterManager
-    Friend WithEvents colID As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIDHeader As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIDItem As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colQty As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIDTax As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colUnitPrice As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIDProject As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colClose As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SelectHeaderPO_DetailBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectHeaderPO_DetailTableAdapter As MyTemplate.DataSetPOTableAdapters.SelectHeaderPO_DetailTableAdapter
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl
@@ -440,4 +439,13 @@ Partial Class DetailPO
     Friend WithEvents lookUpEditProject As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
     Friend WithEvents SelectProjectDataTableBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectProjectTableAdapter As MyTemplate.DataSetPOTableAdapters.SelectProjectTableAdapter
+    Friend WithEvents colID As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIDHeader As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIDItem As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colQty As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIDTax As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colUnitPrice As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIDProject As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDiTerima As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colSisaPermintaan As DevExpress.XtraGrid.Columns.GridColumn
 End Class

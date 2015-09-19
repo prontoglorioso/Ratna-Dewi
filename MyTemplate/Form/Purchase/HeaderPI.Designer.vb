@@ -35,11 +35,11 @@ Partial Class HeaderPI
         Me.colIDSubAccCOA = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAmount = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colisDeleted = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ButtonDetail = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
         Me.PIHeader_SelectTableAdapter = New MyTemplate.DataSetSPPKTableAdapters.PIHeader_SelectTableAdapter()
         Me.TableAdapterManager = New MyTemplate.DataSetSPPKTableAdapters.TableAdapterManager()
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ButtonDetail = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PIHeader_SelectBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetSPPK, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,6 +150,25 @@ Partial Class HeaderPI
         Me.colisDeleted.Visible = True
         Me.colisDeleted.VisibleIndex = 7
         '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Detail"
+        Me.GridColumn1.ColumnEdit = Me.ButtonDetail
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 8
+        '
+        'ButtonDetail
+        '
+        Me.ButtonDetail.Appearance.Image = CType(resources.GetObject("ButtonDetail.Appearance.Image"), System.Drawing.Image)
+        Me.ButtonDetail.Appearance.Options.UseImage = True
+        Me.ButtonDetail.AutoHeight = False
+        SerializableAppearanceObject1.Image = CType(resources.GetObject("SerializableAppearanceObject1.Image"), System.Drawing.Image)
+        SerializableAppearanceObject1.Options.UseImage = True
+        Me.ButtonDetail.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, CType(resources.GetObject("ButtonDetail.Buttons"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, "", Nothing, Nothing, True)})
+        Me.ButtonDetail.Name = "ButtonDetail"
+        Me.ButtonDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
         'SimpleButton5
         '
         Me.SimpleButton5.Appearance.BackColor = System.Drawing.Color.Transparent
@@ -194,25 +213,6 @@ Partial Class HeaderPI
         Me.TableAdapterManager.SRDetail_SelectTableAdapter = Nothing
         Me.TableAdapterManager.SRHeader_SelectTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = MyTemplate.DataSetSPPKTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'GridColumn1
-        '
-        Me.GridColumn1.Caption = "Detail"
-        Me.GridColumn1.ColumnEdit = Me.ButtonDetail
-        Me.GridColumn1.Name = "GridColumn1"
-        Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 8
-        '
-        'ButtonDetail
-        '
-        Me.ButtonDetail.Appearance.Image = CType(resources.GetObject("Detail.Appearance.Image"), System.Drawing.Image)
-        Me.ButtonDetail.Appearance.Options.UseImage = True
-        Me.ButtonDetail.AutoHeight = False
-        SerializableAppearanceObject1.Image = CType(resources.GetObject("SerializableAppearanceObject1.Image"), System.Drawing.Image)
-        SerializableAppearanceObject1.Options.UseImage = True
-        Me.ButtonDetail.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, CType(resources.GetObject("ButtonDetail.Buttons"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, "", Nothing, Nothing, True)})
-        Me.ButtonDetail.Name = "ButtonDetail"
-        Me.ButtonDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
         'HeaderPI
         '

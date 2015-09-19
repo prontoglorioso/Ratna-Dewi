@@ -206,4 +206,10 @@
         newForm.MdiParent = Me
         newForm.Show()
     End Sub
+
+    Private Sub BarButtonItem70_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem70.ItemClick
+        Dim newForm As New HeaderPI
+        newForm.MdiParent = Me
+        newForm.Show()
+    End Sub
 End Class
