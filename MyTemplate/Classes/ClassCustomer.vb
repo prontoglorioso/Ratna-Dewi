@@ -38,9 +38,11 @@
         Try
             SqlCMD.ExecuteNonQuery()
         Catch ex As SqlClient.SqlException
-            If ex.Message.ToString.ToLower.Contains("unique") Then
-                MsgBox("data ada yang sama")
+            If ex.Message.ToString.Contains("UNIQUE KEY") Then
+                XtraMessageBox.Show("Duplicate value detected")
+                Exit Sub
             End If
+            Throw New Exception(ex.Message)
         Finally
             sqlConn.Close()
         End Try

@@ -17,6 +17,7 @@ Public Class ClassActiveUser
         Success = 0
         FailedByUnregisterdID = 1
         FailedByUnMatchedPassword = 2
+        FailedByNonActiveID = 4
         FailedByUnknown = 99
     End Enum
 #End Region
@@ -64,7 +65,7 @@ Public Class ClassActiveUser
     Function Verification() As LoginResultEnum
         If Not dbOpen() Then Return LoginResultEnum.FailedByUnknown
 
-        Dim wrapper As New ClassEncrypt([Password])
+        Dim wrapper As New ClassEncrypt("ASIA1-AFRICA2-AUSTRALIA3-EUROPE4-AMERICA5")
         EncryptedPassword = wrapper.EncryptData([Password])
 
         sqlCmd = New SqlClient.SqlCommand With {.Connection = sqlConn, .CommandType = CommandType.StoredProcedure, .CommandText = "SP_Login"}

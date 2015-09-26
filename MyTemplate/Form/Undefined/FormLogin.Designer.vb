@@ -42,7 +42,6 @@ Partial Class FormLogin
         '
         Me.textEditUserName.Location = New System.Drawing.Point(12, 31)
         Me.textEditUserName.Name = "textEditUserName"
-        ' = DevExpress.LookAndFeel.TouchUIMode.[False]
         Me.textEditUserName.Size = New System.Drawing.Size(380, 20)
         Me.textEditUserName.TabIndex = 1
         '
@@ -50,7 +49,7 @@ Partial Class FormLogin
         '
         Me.textEditPassword.Location = New System.Drawing.Point(12, 94)
         Me.textEditPassword.Name = "textEditPassword"
-        ' = DevExpress.LookAndFeel.TouchUIMode.[False]
+        Me.textEditPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.textEditPassword.Size = New System.Drawing.Size(380, 20)
         Me.textEditPassword.TabIndex = 2
         '
@@ -83,6 +82,7 @@ Partial Class FormLogin
         '
         'FormLogin
         '
+        Me.AcceptButton = Me.buttonLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(412, 164)

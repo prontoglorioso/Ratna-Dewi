@@ -139,7 +139,6 @@
     <Compile Include="Classes\ClassPosition.vb" />
     <Compile Include="Classes\ClassProject.vb" />
     <Compile Include="Classes\ClassTax.vb" />
-    <Compile Include="Classes\ClassUser.vb" />
     <Compile Include="Classes\ClassVendor.vb" />
     <Compile Include="Classes\ReadConfig.vb" />
     <Compile Include="Control\MyForm.Designer.vb">
@@ -397,12 +396,6 @@
     <Compile Include="Form\DisposableForm\FormJournalVoucher.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Undefined\FormLogin.Designer.vb">
-      <DependentUpon>FormLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Undefined\FormLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\DisposableForm\FormPayment.Designer.vb">
       <DependentUpon>FormPayment.vb</DependentUpon>
     </Compile>
@@ -467,12 +460,6 @@
       <DependentUpon>FormTaxes.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\MasterData\Tax\FormTaxes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Undefined\FormUser.Designer.vb">
-      <DependentUpon>FormUser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Undefined\FormUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\MasterData\Vendor\FormVendor.Designer.vb">
@@ -557,6 +544,19 @@
       <DependentUpon>RichEdit.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\Tools\RichEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Undefined\ClassUser.vb" />
+    <Compile Include="Form\Undefined\FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Undefined\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Undefined\FormUser.Designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Undefined\FormUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Undefined\SplashScreen1.Designer.vb">
@@ -727,9 +727,6 @@
     <EmbeddedResource Include="Form\DisposableForm\FormJournalVoucher.resx">
       <DependentUpon>FormJournalVoucher.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\FormLogin.resx">
-      <DependentUpon>FormLogin.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\DisposableForm\FormPayment.resx">
       <DependentUpon>FormPayment.vb</DependentUpon>
     </EmbeddedResource>
@@ -762,9 +759,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MasterData\Tax\FormTaxes.resx">
       <DependentUpon>FormTaxes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Undefined\FormUser.resx">
-      <DependentUpon>FormUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MasterData\Vendor\FormVendor.resx">
       <DependentUpon>FormVendor.vb</DependentUpon>
@@ -807,6 +801,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Tools\RichEdit.resx">
       <DependentUpon>RichEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Undefined\FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Undefined\FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Undefined\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>

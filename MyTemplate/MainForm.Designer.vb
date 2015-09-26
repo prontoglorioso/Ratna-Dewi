@@ -100,6 +100,8 @@ Partial Class MainForm
         Me.BarButtonItem67 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem68 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem69 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarSubItem6 = New DevExpress.XtraBars.BarSubItem()
+        Me.BarButtonItem70 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -159,8 +161,6 @@ Partial Class MainForm
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.BarButtonItem65 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem66 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarSubItem6 = New DevExpress.XtraBars.BarSubItem()
-        Me.BarButtonItem70 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemCheckEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -720,6 +720,19 @@ Partial Class MainForm
         Me.BarButtonItem69.Name = "BarButtonItem69"
         Me.BarButtonItem69.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BarSubItem6
+        '
+        Me.BarSubItem6.Caption = "BarSubItem6"
+        Me.BarSubItem6.Id = 83
+        Me.BarSubItem6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem70)})
+        Me.BarSubItem6.Name = "BarSubItem6"
+        '
+        'BarButtonItem70
+        '
+        Me.BarButtonItem70.Caption = "BarButtonItem70"
+        Me.BarButtonItem70.Id = 84
+        Me.BarButtonItem70.Name = "BarButtonItem70"
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
@@ -798,7 +811,6 @@ Partial Class MainForm
         Me.RibbonPageGroup9.AllowTextClipping = False
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem68)
         Me.RibbonPageGroup9.ItemLinks.Add(Me.BarButtonItem69)
-        Me.RibbonPageGroup9.ItemLinks.Add(Me.BarSubItem6)
         Me.RibbonPageGroup9.Name = "RibbonPageGroup9"
         Me.RibbonPageGroup9.ShowCaptionButton = False
         Me.RibbonPageGroup9.Text = "TRANSACTION"
@@ -1112,19 +1124,6 @@ Partial Class MainForm
         Me.BarButtonItem66.LargeGlyph = CType(resources.GetObject("BarButtonItem66.LargeGlyph"), System.Drawing.Image)
         Me.BarButtonItem66.Name = "BarButtonItem66"
         Me.BarButtonItem66.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
-        '
-        'BarSubItem6
-        '
-        Me.BarSubItem6.Caption = "BarSubItem6"
-        Me.BarSubItem6.Id = 83
-        Me.BarSubItem6.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem70)})
-        Me.BarSubItem6.Name = "BarSubItem6"
-        '
-        'BarButtonItem70
-        '
-        Me.BarButtonItem70.Caption = "BarButtonItem70"
-        Me.BarButtonItem70.Id = 84
-        Me.BarButtonItem70.Name = "BarButtonItem70"
         '
         'MainForm
         '
