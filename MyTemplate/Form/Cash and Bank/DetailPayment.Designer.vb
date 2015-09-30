@@ -54,6 +54,7 @@ Partial Class DetailPayment
         Me.SelectEmployeeDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.colIDVendor = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LookUpEditVendor = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.SelectVendorDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.colIDProject = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LookUpEditProject = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectProjectDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -64,7 +65,6 @@ Partial Class DetailPayment
         Me.SelectSubAccCOATableAdapter = New MyTemplate.DataSetPaymentTableAdapters.SelectSubAccCOATableAdapter()
         Me.SelectEmployeeDataTableTableAdapter = New MyTemplate.DataSetPaymentTableAdapters.SelectEmployeeDataTableTableAdapter()
         Me.SelectProjectDataTableTableAdapter = New MyTemplate.DataSetPaymentTableAdapters.SelectProjectDataTableTableAdapter()
-        Me.SelectVendorDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SelectVendorDataTableTableAdapter = New MyTemplate.DataSetPaymentTableAdapters.SelectVendorDataTableTableAdapter()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
@@ -82,9 +82,9 @@ Partial Class DetailPayment
         CType(Me.LookUpEditEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectEmployeeDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditVendor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectVendorDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditProject, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectVendorDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupControl2
@@ -288,11 +288,11 @@ Partial Class DetailPayment
         '
         Me.PaymentDetailDataTableGridControl.DataSource = Me.PaymentDetailDataTableBindingSource
         Me.PaymentDetailDataTableGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PaymentDetailDataTableGridControl.Location = New System.Drawing.Point(2, 20)
+        Me.PaymentDetailDataTableGridControl.Location = New System.Drawing.Point(2, 22)
         Me.PaymentDetailDataTableGridControl.MainView = Me.GridView1
         Me.PaymentDetailDataTableGridControl.Name = "PaymentDetailDataTableGridControl"
         Me.PaymentDetailDataTableGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.LookUpEditSubAccCOA, Me.LookUpEditEmployee, Me.LookUpEditVendor, Me.LookUpEditProject})
-        Me.PaymentDetailDataTableGridControl.Size = New System.Drawing.Size(741, 301)
+        Me.PaymentDetailDataTableGridControl.Size = New System.Drawing.Size(741, 299)
         Me.PaymentDetailDataTableGridControl.TabIndex = 0
         Me.PaymentDetailDataTableGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -306,6 +306,7 @@ Partial Class DetailPayment
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDSubAccCOA, Me.colAmount, Me.colIDEmployee, Me.colIDVendor, Me.colIDProject, Me.colidHeaderPayment})
         Me.GridView1.GridControl = Me.PaymentDetailDataTableGridControl
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsView.ShowFooter = True
         '
         'colID
         '
@@ -340,6 +341,7 @@ Partial Class DetailPayment
         '
         Me.colAmount.FieldName = "Amount"
         Me.colAmount.Name = "colAmount"
+        Me.colAmount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Amount", "{0:0.##}")})
         Me.colAmount.Visible = True
         Me.colAmount.VisibleIndex = 2
         '
@@ -381,6 +383,11 @@ Partial Class DetailPayment
         Me.LookUpEditVendor.DisplayMember = "nama"
         Me.LookUpEditVendor.Name = "LookUpEditVendor"
         Me.LookUpEditVendor.ValueMember = "id"
+        '
+        'SelectVendorDataTableBindingSource
+        '
+        Me.SelectVendorDataTableBindingSource.DataMember = "SelectVendorDataTable"
+        Me.SelectVendorDataTableBindingSource.DataSource = Me.DataSetPayment
         '
         'colIDProject
         '
@@ -438,11 +445,6 @@ Partial Class DetailPayment
         '
         Me.SelectProjectDataTableTableAdapter.ClearBeforeFill = True
         '
-        'SelectVendorDataTableBindingSource
-        '
-        Me.SelectVendorDataTableBindingSource.DataMember = "SelectVendorDataTable"
-        Me.SelectVendorDataTableBindingSource.DataSource = Me.DataSetPayment
-        '
         'SelectVendorDataTableTableAdapter
         '
         Me.SelectVendorDataTableTableAdapter.ClearBeforeFill = True
@@ -474,9 +476,9 @@ Partial Class DetailPayment
         CType(Me.LookUpEditEmployee, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectEmployeeDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditVendor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectVendorDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditProject, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectVendorDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

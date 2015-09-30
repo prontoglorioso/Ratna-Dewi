@@ -225,3 +225,4 @@ C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\
 C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.exe.licenses
 C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.DetailP1O.resources
 C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.FormPurchaseInvoiceHeader.resources
+C:\Users\Pronto\Documents\Visual Studio 2013\Projects\Ratna-Dewi\MyTemplate\obj\Debug\MyTemplate.vbprojResolveAssemblyReference.cache

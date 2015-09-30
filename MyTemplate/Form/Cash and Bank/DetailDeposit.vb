@@ -1,5 +1,25 @@
 ﻿Public Class DetailDeposit 
     Public Property idHeaderDeposit As Integer
+    Private totalAmount As Integer
+    Private filledAmount As Integer
+    Public Property _filledAmount() As Integer
+        Get
+            Return filledAmount
+        End Get
+        Set(ByVal value As Integer)
+            filledAmount = value
+        End Set
+    End Property
+
+    Public Property _totalAmount() As Integer
+        Get
+            Return totalAmount
+        End Get
+        Set(ByVal value As Integer)
+            totalAmount = value
+        End Set
+    End Property
+
 #Region "DataHeader"
     Sub LoadHeader()
         Try
@@ -35,8 +55,10 @@
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         GridView2.AddNewRow()
         GridView2.SetFocusedRowCellValue(colIDHeaderDeposit, IDTextBox.Text)
+
         'Me.DepositDetailDataTableBindingSource1.AddNew()
 
+        
 
     End Sub
 
@@ -45,7 +67,11 @@
     End Sub
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
-        SaveDetailDeposit()
+        If Val(LabelControl9.Text) - GridView2.Columns(2).SummaryText <> 0 Then
+            alert.Show(Me, "Info", "Amount !! Error")
+        Else
+            SaveDetailDeposit()
+        End If
     End Sub
 
     Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
@@ -73,4 +99,11 @@
         End Try
     End Sub
 
+    Private Sub LookUpEditSubAccCOA_EditValueChanged(sender As Object, e As EventArgs) Handles LookUpEditSubAccCOA.EditValueChanged
+        _totalAmount = GridView2.Columns(2).SummaryText
+
+        _filledAmount = LabelControl9.Text - _totalAmount
+
+        GridView2.SetFocusedRowCellValue(colAmount, _filledAmount)
+    End Sub
 End Class

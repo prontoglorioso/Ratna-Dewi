@@ -5,6 +5,8 @@
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CloseBox = False
 
+        login()
+
     End Sub
 
     Private Sub buttonLogin_Click(sender As Object, e As EventArgs) Handles buttonLogin.Click
@@ -20,9 +22,17 @@
         '    Exit Sub
         'End If
 
-        oClassActiveUser.Username = textEditUserName.Text
-        oClassActiveUser.Password = textEditPassword.Text
 
+    End Sub
+
+    Private Sub buttonCancel_Click(sender As Object, e As EventArgs) Handles buttonCancel.Click
+        Application.Exit()
+    End Sub
+
+    Sub login()
+
+        oClassActiveUser.Username = "RatnaDewi"
+        oClassActiveUser.Password = "RatnaDewi"
 
         Select Case oClassActiveUser.Verification
             Case ClassActiveUser.LoginResultEnum.Success
@@ -60,10 +70,6 @@
                 'End
 
         End Select
-
     End Sub
 
-    Private Sub buttonCancel_Click(sender As Object, e As EventArgs) Handles buttonCancel.Click
-        Application.Exit()
-    End Sub
 End Class

@@ -1,5 +1,27 @@
 ﻿Public Class DetailPayment 
     Public Property idHeaderPayment As Integer
+    Private totalAmount As Integer
+    Private filledAmount As Integer
+    Public Property _filledAmount() As Integer
+        Get
+            Return filledAmount
+        End Get
+        Set(ByVal value As Integer)
+            filledAmount = value
+        End Set
+    End Property
+
+    Public Property _totalAmount() As Integer
+        Get
+            Return totalAmount
+        End Get
+        Set(ByVal value As Integer)
+            totalAmount = value
+        End Set
+    End Property
+
+
+
 #Region "DataHeader"
     Sub LoadHeader()
         Try
@@ -57,7 +79,12 @@
         Me.TableAdapterManager.UpdateAll(Me.DataSetPayment)
     End Sub
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click
-        SaveDetailPayment()
+
+        If GridView1.Columns(2).SummaryText - LabelControl9.Text <> 0 Then
+            alert.Show(Me, "", "Amount Error!!")
+        Else
+            SaveDetailPayment()
+        End If
     End Sub
     Private Sub SimpleButton3_Click(sender As Object, e As EventArgs) Handles SimpleButton3.Click
         DeleteDataDetail()
@@ -70,5 +97,12 @@
         'If value >= 0 Then
         '    LookUpEditVendor.e()
         'End If
+    End Sub
+
+    Private Sub LookUpEditSubAccCOA_EditValueChanged(sender As Object, e As EventArgs) Handles LookUpEditSubAccCOA.EditValueChanged
+        _totalAmount = GridView1.Columns(2).SummaryText
+        _filledAmount = LabelControl9.Text - _totalAmount
+
+        GridView1.SetFocusedRowCellValue(colAmount, _filledAmount)
     End Sub
 End Class

@@ -40,10 +40,25 @@ Partial Class DetailDeposit
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.DepositDetailDataTableGridControl = New DevExpress.XtraGrid.GridControl()
+        Me.DepositDetailDataTableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSetDeposit1 = New MyTemplate.DataSetDeposit()
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colIDSubAccCOA = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LookUpEditSubAccCOA = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectSubAccCOADataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.colAmount = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colIDEmployee = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LookUpEditEmployee = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectEmployeeDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.colIDCustomer = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LookUpEditCustomer = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectCustomerDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.colIDProject = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LookUpEditProject = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.SelectProjectDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.colIDHeaderDeposit = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.HeaderDepositTableAdapter = New MyTemplate.DataSetDepositTableAdapters.HeaderDepositTableAdapter()
         Me.TableAdapterManager = New MyTemplate.DataSetDepositTableAdapters.TableAdapterManager()
         Me.DepositDetailTableAdapter = New MyTemplate.DataSetDepositTableAdapters.DepositDetailTableAdapter()
@@ -52,23 +67,8 @@ Partial Class DetailDeposit
         Me.SelectHeaderDepositDetailTableAdapter = New MyTemplate.DataSetDepositTableAdapters.SelectHeaderDepositDetailTableAdapter()
         Me.SelectCustomerDataTableTableAdapter = New MyTemplate.DataSetDepositTableAdapters.SelectCustomerDataTableTableAdapter()
         Me.SelectProjectDataTableTableAdapter = New MyTemplate.DataSetDepositTableAdapters.SelectProjectDataTableTableAdapter()
-        Me.DataSetDeposit1 = New MyTemplate.DataSetDeposit()
-        Me.DepositDetailDataTableBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DepositDetailTableAdapter1 = New MyTemplate.DataSetDepositTableAdapters.DepositDetailTableAdapter()
         Me.TableAdapterManager1 = New MyTemplate.DataSetDepositTableAdapters.TableAdapterManager()
-        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colIDSubAccCOA = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colAmount = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colIDEmployee = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colIDCustomer = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colIDProject = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colIDHeaderDeposit = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.DepositDetailDataTableGridControl = New DevExpress.XtraGrid.GridControl()
-        Me.LookUpEditSubAccCOA = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.LookUpEditEmployee = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.LookUpEditCustomer = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.LookUpEditProject = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl3.SuspendLayout()
         CType(Me.SelectHeaderDepositDetailDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,18 +78,18 @@ Partial Class DetailDeposit
         CType(Me.HeaderDepositDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
-        CType(Me.SelectSubAccCOADataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectEmployeeDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectCustomerDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSetDeposit1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DepositDetailDataTableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DepositDetailDataTableGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DepositDetailDataTableBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetDeposit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditSubAccCOA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectSubAccCOADataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectEmployeeDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectCustomerDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LookUpEditProject, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SimpleButton3
@@ -273,25 +273,145 @@ Partial Class DetailDeposit
         Me.GroupControl1.TabIndex = 9
         Me.GroupControl1.Text = "List Of Detail Payment"
         '
+        'DepositDetailDataTableGridControl
+        '
+        Me.DepositDetailDataTableGridControl.DataSource = Me.DepositDetailDataTableBindingSource1
+        Me.DepositDetailDataTableGridControl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DepositDetailDataTableGridControl.Location = New System.Drawing.Point(2, 22)
+        Me.DepositDetailDataTableGridControl.MainView = Me.GridView2
+        Me.DepositDetailDataTableGridControl.Name = "DepositDetailDataTableGridControl"
+        Me.DepositDetailDataTableGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.LookUpEditSubAccCOA, Me.LookUpEditEmployee, Me.LookUpEditCustomer, Me.LookUpEditProject})
+        Me.DepositDetailDataTableGridControl.Size = New System.Drawing.Size(741, 287)
+        Me.DepositDetailDataTableGridControl.TabIndex = 3
+        Me.DepositDetailDataTableGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
+        '
+        'DepositDetailDataTableBindingSource1
+        '
+        Me.DepositDetailDataTableBindingSource1.DataMember = "DepositDetailDataTable"
+        Me.DepositDetailDataTableBindingSource1.DataSource = Me.DataSetDeposit1
+        '
+        'DataSetDeposit1
+        '
+        Me.DataSetDeposit1.DataSetName = "DataSetDeposit"
+        Me.DataSetDeposit1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'GridView2
+        '
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDSubAccCOA, Me.colAmount, Me.colIDEmployee, Me.colIDCustomer, Me.colIDProject, Me.colIDHeaderDeposit})
+        Me.GridView2.GridControl = Me.DepositDetailDataTableGridControl
+        Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways
+        Me.GridView2.OptionsView.ShowFooter = True
+        '
+        'colID
+        '
+        Me.colID.FieldName = "ID"
+        Me.colID.Name = "colID"
+        Me.colID.Visible = True
+        Me.colID.VisibleIndex = 0
+        '
+        'colIDSubAccCOA
+        '
+        Me.colIDSubAccCOA.ColumnEdit = Me.LookUpEditSubAccCOA
+        Me.colIDSubAccCOA.FieldName = "IDSubAccCOA"
+        Me.colIDSubAccCOA.Name = "colIDSubAccCOA"
+        Me.colIDSubAccCOA.Visible = True
+        Me.colIDSubAccCOA.VisibleIndex = 1
+        '
+        'LookUpEditSubAccCOA
+        '
+        Me.LookUpEditSubAccCOA.AutoHeight = False
+        Me.LookUpEditSubAccCOA.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LookUpEditSubAccCOA.DataSource = Me.SelectSubAccCOADataTableBindingSource
+        Me.LookUpEditSubAccCOA.DisplayMember = "namaSubAccount"
+        Me.LookUpEditSubAccCOA.Name = "LookUpEditSubAccCOA"
+        Me.LookUpEditSubAccCOA.ValueMember = "id"
+        '
         'SelectSubAccCOADataTableBindingSource
         '
         Me.SelectSubAccCOADataTableBindingSource.DataMember = "SelectSubAccCOADataTable"
         Me.SelectSubAccCOADataTableBindingSource.DataSource = Me.DataSetDeposit
+        '
+        'colAmount
+        '
+        Me.colAmount.FieldName = "Amount"
+        Me.colAmount.Name = "colAmount"
+        Me.colAmount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Amount", "{0:0.##}")})
+        Me.colAmount.Visible = True
+        Me.colAmount.VisibleIndex = 2
+        '
+        'colIDEmployee
+        '
+        Me.colIDEmployee.ColumnEdit = Me.LookUpEditEmployee
+        Me.colIDEmployee.FieldName = "IDEmployee"
+        Me.colIDEmployee.Name = "colIDEmployee"
+        Me.colIDEmployee.Visible = True
+        Me.colIDEmployee.VisibleIndex = 3
+        '
+        'LookUpEditEmployee
+        '
+        Me.LookUpEditEmployee.AutoHeight = False
+        Me.LookUpEditEmployee.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LookUpEditEmployee.DataSource = Me.SelectEmployeeDataTableBindingSource
+        Me.LookUpEditEmployee.DisplayMember = "namaKaryawan"
+        Me.LookUpEditEmployee.Name = "LookUpEditEmployee"
+        Me.LookUpEditEmployee.ValueMember = "id"
         '
         'SelectEmployeeDataTableBindingSource
         '
         Me.SelectEmployeeDataTableBindingSource.DataMember = "SelectEmployeeDataTable"
         Me.SelectEmployeeDataTableBindingSource.DataSource = Me.DataSetDeposit
         '
+        'colIDCustomer
+        '
+        Me.colIDCustomer.ColumnEdit = Me.LookUpEditCustomer
+        Me.colIDCustomer.FieldName = "IDCustomer"
+        Me.colIDCustomer.Name = "colIDCustomer"
+        Me.colIDCustomer.Visible = True
+        Me.colIDCustomer.VisibleIndex = 4
+        '
+        'LookUpEditCustomer
+        '
+        Me.LookUpEditCustomer.AutoHeight = False
+        Me.LookUpEditCustomer.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LookUpEditCustomer.DataSource = Me.SelectCustomerDataTableBindingSource
+        Me.LookUpEditCustomer.DisplayMember = "nama"
+        Me.LookUpEditCustomer.Name = "LookUpEditCustomer"
+        Me.LookUpEditCustomer.ValueMember = "id"
+        '
         'SelectCustomerDataTableBindingSource
         '
         Me.SelectCustomerDataTableBindingSource.DataMember = "SelectCustomerDataTable"
         Me.SelectCustomerDataTableBindingSource.DataSource = Me.DataSetDeposit
         '
+        'colIDProject
+        '
+        Me.colIDProject.ColumnEdit = Me.LookUpEditProject
+        Me.colIDProject.FieldName = "IDProject"
+        Me.colIDProject.Name = "colIDProject"
+        Me.colIDProject.Visible = True
+        Me.colIDProject.VisibleIndex = 5
+        '
+        'LookUpEditProject
+        '
+        Me.LookUpEditProject.AutoHeight = False
+        Me.LookUpEditProject.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LookUpEditProject.DataSource = Me.SelectProjectDataTableBindingSource
+        Me.LookUpEditProject.DisplayMember = "projectName"
+        Me.LookUpEditProject.Name = "LookUpEditProject"
+        Me.LookUpEditProject.ValueMember = "id"
+        '
         'SelectProjectDataTableBindingSource
         '
         Me.SelectProjectDataTableBindingSource.DataMember = "SelectProjectDataTable"
         Me.SelectProjectDataTableBindingSource.DataSource = Me.DataSetDeposit
+        '
+        'colIDHeaderDeposit
+        '
+        Me.colIDHeaderDeposit.FieldName = "IDHeaderDeposit"
+        Me.colIDHeaderDeposit.Name = "colIDHeaderDeposit"
+        Me.colIDHeaderDeposit.Visible = True
+        Me.colIDHeaderDeposit.VisibleIndex = 6
         '
         'HeaderDepositTableAdapter
         '
@@ -328,16 +448,6 @@ Partial Class DetailDeposit
         '
         Me.SelectProjectDataTableTableAdapter.ClearBeforeFill = True
         '
-        'DataSetDeposit1
-        '
-        Me.DataSetDeposit1.DataSetName = "DataSetDeposit"
-        Me.DataSetDeposit1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DepositDetailDataTableBindingSource1
-        '
-        Me.DepositDetailDataTableBindingSource1.DataMember = "DepositDetailDataTable"
-        Me.DepositDetailDataTableBindingSource1.DataSource = Me.DataSetDeposit1
-        '
         'DepositDetailTableAdapter1
         '
         Me.DepositDetailTableAdapter1.ClearBeforeFill = True
@@ -348,113 +458,6 @@ Partial Class DetailDeposit
         Me.TableAdapterManager1.DepositDetailTableAdapter = Me.DepositDetailTableAdapter1
         Me.TableAdapterManager1.HeaderDepositTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = MyTemplate.DataSetDepositTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'GridView2
-        '
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colID, Me.colIDSubAccCOA, Me.colAmount, Me.colIDEmployee, Me.colIDCustomer, Me.colIDProject, Me.colIDHeaderDeposit})
-        Me.GridView2.GridControl = Me.DepositDetailDataTableGridControl
-        Me.GridView2.Name = "GridView2"
-        '
-        'colID
-        '
-        Me.colID.FieldName = "ID"
-        Me.colID.Name = "colID"
-        Me.colID.Visible = True
-        Me.colID.VisibleIndex = 0
-        '
-        'colIDSubAccCOA
-        '
-        Me.colIDSubAccCOA.ColumnEdit = Me.LookUpEditSubAccCOA
-        Me.colIDSubAccCOA.FieldName = "IDSubAccCOA"
-        Me.colIDSubAccCOA.Name = "colIDSubAccCOA"
-        Me.colIDSubAccCOA.Visible = True
-        Me.colIDSubAccCOA.VisibleIndex = 1
-        '
-        'colAmount
-        '
-        Me.colAmount.FieldName = "Amount"
-        Me.colAmount.Name = "colAmount"
-        Me.colAmount.Visible = True
-        Me.colAmount.VisibleIndex = 2
-        '
-        'colIDEmployee
-        '
-        Me.colIDEmployee.ColumnEdit = Me.LookUpEditEmployee
-        Me.colIDEmployee.FieldName = "IDEmployee"
-        Me.colIDEmployee.Name = "colIDEmployee"
-        Me.colIDEmployee.Visible = True
-        Me.colIDEmployee.VisibleIndex = 3
-        '
-        'colIDCustomer
-        '
-        Me.colIDCustomer.ColumnEdit = Me.LookUpEditCustomer
-        Me.colIDCustomer.FieldName = "IDCustomer"
-        Me.colIDCustomer.Name = "colIDCustomer"
-        Me.colIDCustomer.Visible = True
-        Me.colIDCustomer.VisibleIndex = 4
-        '
-        'colIDProject
-        '
-        Me.colIDProject.ColumnEdit = Me.LookUpEditProject
-        Me.colIDProject.FieldName = "IDProject"
-        Me.colIDProject.Name = "colIDProject"
-        Me.colIDProject.Visible = True
-        Me.colIDProject.VisibleIndex = 5
-        '
-        'colIDHeaderDeposit
-        '
-        Me.colIDHeaderDeposit.FieldName = "IDHeaderDeposit"
-        Me.colIDHeaderDeposit.Name = "colIDHeaderDeposit"
-        Me.colIDHeaderDeposit.Visible = True
-        Me.colIDHeaderDeposit.VisibleIndex = 6
-        '
-        'DepositDetailDataTableGridControl
-        '
-        Me.DepositDetailDataTableGridControl.DataSource = Me.DepositDetailDataTableBindingSource1
-        Me.DepositDetailDataTableGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DepositDetailDataTableGridControl.Location = New System.Drawing.Point(2, 20)
-        Me.DepositDetailDataTableGridControl.MainView = Me.GridView2
-        Me.DepositDetailDataTableGridControl.Name = "DepositDetailDataTableGridControl"
-        Me.DepositDetailDataTableGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.LookUpEditSubAccCOA, Me.LookUpEditEmployee, Me.LookUpEditCustomer, Me.LookUpEditProject})
-        Me.DepositDetailDataTableGridControl.Size = New System.Drawing.Size(741, 289)
-        Me.DepositDetailDataTableGridControl.TabIndex = 3
-        Me.DepositDetailDataTableGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
-        '
-        'LookUpEditSubAccCOA
-        '
-        Me.LookUpEditSubAccCOA.AutoHeight = False
-        Me.LookUpEditSubAccCOA.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LookUpEditSubAccCOA.DataSource = Me.SelectSubAccCOADataTableBindingSource
-        Me.LookUpEditSubAccCOA.DisplayMember = "namaSubAccount"
-        Me.LookUpEditSubAccCOA.Name = "LookUpEditSubAccCOA"
-        Me.LookUpEditSubAccCOA.ValueMember = "id"
-        '
-        'LookUpEditEmployee
-        '
-        Me.LookUpEditEmployee.AutoHeight = False
-        Me.LookUpEditEmployee.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LookUpEditEmployee.DataSource = Me.SelectEmployeeDataTableBindingSource
-        Me.LookUpEditEmployee.DisplayMember = "namaKaryawan"
-        Me.LookUpEditEmployee.Name = "LookUpEditEmployee"
-        Me.LookUpEditEmployee.ValueMember = "id"
-        '
-        'LookUpEditCustomer
-        '
-        Me.LookUpEditCustomer.AutoHeight = False
-        Me.LookUpEditCustomer.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LookUpEditCustomer.DataSource = Me.SelectCustomerDataTableBindingSource
-        Me.LookUpEditCustomer.DisplayMember = "nama"
-        Me.LookUpEditCustomer.Name = "LookUpEditCustomer"
-        Me.LookUpEditCustomer.ValueMember = "id"
-        '
-        'LookUpEditProject
-        '
-        Me.LookUpEditProject.AutoHeight = False
-        Me.LookUpEditProject.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LookUpEditProject.DataSource = Me.SelectProjectDataTableBindingSource
-        Me.LookUpEditProject.DisplayMember = "projectName"
-        Me.LookUpEditProject.Name = "LookUpEditProject"
-        Me.LookUpEditProject.ValueMember = "id"
         '
         'DetailDeposit
         '
@@ -476,18 +479,18 @@ Partial Class DetailDeposit
         CType(Me.HeaderDepositDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
-        CType(Me.SelectSubAccCOADataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectEmployeeDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectCustomerDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSetDeposit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DepositDetailDataTableBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DepositDetailDataTableGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DepositDetailDataTableBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetDeposit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditSubAccCOA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectSubAccCOADataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditEmployee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectEmployeeDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectCustomerDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LookUpEditProject, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
